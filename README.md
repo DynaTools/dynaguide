@@ -2,9 +2,18 @@
 
 **Documentação técnica dinâmica e interativa sobre Inteligência Artificial para profissionais de Arquitetura, Engenharia e Construção**
 
+<div align="center">
+
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://dynatools.github.io/dynaguide/)
 [![Built with Docusaurus](https://img.shields.io/badge/Built%20with-Docusaurus-blue)](https://docusaurus.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub issues](https://img.shields.io/github/issues/DynaTools/dynaguide)](https://github.com/DynaTools/dynaguide/issues)
+[![GitHub stars](https://img.shields.io/github/stars/DynaTools/dynaguide)](https://github.com/DynaTools/dynaguide/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/DynaTools/dynaguide)](https://github.com/DynaTools/dynaguide/network)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/DynaTools/dynaguide/graphs/commit-activity)
+[![GitHub contributors](https://img.shields.io/github/contributors/DynaTools/dynaguide)](https://github.com/DynaTools/dynaguide/graphs/contributors)
+
+</div>
 
 ## 📖 Sobre o Projeto
 
