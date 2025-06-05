@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+slug: /
 ---
 
 # Bem-vindo ao DynaGuide 🤖🏗️
@@ -25,7 +26,7 @@ O **DynaGuide** é sua plataforma completa para aprender e aplicar Inteligência
           </p>
         </div>
         <div className="card__footer">
-          <a href="/docs/category/fundamentos-de-ia" className="button button--primary button--block">
+          <a href="/category/fundamentos-de-ia" className="button button--primary button--block">
             Explorar Fundamentos
           </a>
         </div>
@@ -42,8 +43,44 @@ O **DynaGuide** é sua plataforma completa para aprender e aplicar Inteligência
           </p>
         </div>
         <div className="card__footer">
-          <a href="/docs/category/engenharia-de-prompt" className="button button--primary button--block">
+          <a href="/category/engenharia-de-prompt" className="button button--primary button--block">
             Aprender Prompting
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div className="row" style={{marginTop: '20px'}}>
+    <div className="col col--6">
+      <div className="card">
+        <div className="card__header">
+          <h3>🛠️ Ferramentas de IA</h3>
+        </div>
+        <div className="card__body">
+          <p>
+            Descubra e aprenda a usar as principais plataformas e ferramentas de IA disponíveis no mercado.
+          </p>
+        </div>
+        <div className="card__footer">
+          <a href="/category/ferramentas-para-aprendizagem-de-ia" className="button button--primary button--block">
+            Descobrir Ferramentas
+          </a>
+        </div>
+      </div>
+    </div>
+    <div className="col col--6">
+      <div className="card">
+        <div className="card__header">
+          <h3>📄 Análise de Texto</h3>
+        </div>
+        <div className="card__body">
+          <p>
+            Aprenda a trabalhar com diferentes formatos de texto e como otimizar documentos para IA.
+          </p>
+        </div>
+        <div className="card__footer">
+          <a href="/category/analise-de-texto-com-ia" className="button button--primary button--block">
+            Processar Textos
           </a>
         </div>
       </div>
@@ -54,12 +91,18 @@ O **DynaGuide** é sua plataforma completa para aprender e aplicar Inteligência
 ## 📖 Por onde começar?
 
 ### 1. **Novo na IA?** 
-Comece pelos [**Fundamentos de IA**](/docs/category/fundamentos-de-ia) para entender os conceitos básicos e como a tecnologia se aplica ao seu trabalho.
+Comece pelos [**Fundamentos de IA**](/category/fundamentos-de-ia) para entender os conceitos básicos e como a tecnologia se aplica ao seu trabalho.
 
-### 2. **Já conhece IA?** 
-Vá direto para [**Engenharia de Prompt**](/docs/category/engenharia-de-prompt) e aprenda técnicas avançadas para maximizar seus resultados.
+### 2. **Quer experimentar na prática?** 
+Explore as [**Ferramentas de IA**](/category/ferramentas-para-aprendizagem-de-ia) e comece a testar plataformas como Google AI Studio.
 
-### 3. **Procura algo específico?** 
+### 3. **Já conhece IA?** 
+Vá direto para [**Engenharia de Prompt**](/category/engenharia-de-prompt) e aprenda técnicas avançadas para maximizar seus resultados.
+
+### 4. **Trabalha com documentos?** 
+Descubra como otimizar textos em [**Análise de Texto com IA**](/category/analise-de-texto-com-ia).
+
+### 5. **Procura algo específico?** 
 Use a barra de pesquisa no topo da página ou navegue pelo menu lateral.
 
 ## 🛠️ O que você vai aprender
@@ -68,17 +111,18 @@ Use a barra de pesquisa no topo da página ou navegue pelo menu lateral.
 - Como usar IA para otimizar projetos de arquitetura
 - Automação de tarefas repetitivas em engenharia
 - Geração de documentação técnica inteligente
-- Análise de dados de construção com IA
+- Análise e processamento de textos com IA
 
 ### 📚 Conhecimento Técnico
 - Fundamentos de Large Language Models (LLMs)
 - Técnicas avançadas de prompt engineering
-- Segurança e boas práticas no uso empresarial
-- Integração de IA com ferramentas existentes
+- Domínio de ferramentas como Google AI Studio
+- Formatos de arquivo otimizados para IA (Markdown, JSON, XML)
 
 ### 🎯 Casos de Uso Reais
-- Exemplos práticos com Revit, AutoCAD e outras ferramentas
+- Playground prático com modelos de IA
 - Fluxos de trabalho otimizados com IA
+- Processamento inteligente de documentos
 - Soluções para desafios comuns do setor
 
 ## 🚀 Começando Agora

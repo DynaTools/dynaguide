@@ -54,10 +54,7 @@ Seção dedicada aos conceitos fundamentais de Inteligência Artificial aplicado
 - Ferramentas recomendadas para cada tipo de tarefa
 - Casos de uso específicos para profissionais de AEC
 
-#### 4. [📝 Recursos e Funcionalidades do Markdown](https://dynatools.github.io/dynaguide/docs/Fundamentos_de_IA/markdown-features)
-- Guia técnico sobre funcionalidades do Docusaurus
-- Como criar documentação técnica eficiente
-- Exemplos de formatação e estruturação
+
 
 ---
 
@@ -164,8 +161,7 @@ dynaguide/
 │   ├── Fundamentos_de_IA/         # Seção de fundamentos
 │   │   ├── intro_IA.md
 │   │   ├── grandes_modelos.md
-│   │   ├── aplicar.md
-│   │   └── markdown-features.mdx
+│   │   └── aplicar.md
 │   └── Prompt/                    # Seção de engenharia de prompt
 │       ├── oquee.md
 │       ├── 2-tecnicas-basicas.md

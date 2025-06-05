@@ -42,26 +42,14 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          sidebarCollapsed: false,
+          routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/DynaTools/dynaguide/tree/main/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/DynaTools/dynaguide/tree/main/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -85,7 +73,6 @@ const config: Config = {
           position: 'left',
           label: 'Visão Geral',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/DynaTools/dynaguide',
           label: 'GitHub',
@@ -101,15 +88,15 @@ const config: Config = {
           items: [
             {
               label: 'Visão Geral',
-              to: '/docs/intro',
+              to: '/',
             },
             {
               label: 'Fundamentos de IA',
-              to: '/docs/category/fundamentos-de-ia',
+              to: '/category/fundamentos-de-ia',
             },
             {
               label: 'Prompts',
-              to: '/docs/category/engenharia-de-prompt',
+              to: '/category/engenharia-de-prompt',
             },
           ],
         },
@@ -129,10 +116,6 @@ const config: Config = {
         {
           title: 'Mais',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
             {
               label: 'GitHub',
               href: 'https://github.com/DynaTools/dynaguide',
