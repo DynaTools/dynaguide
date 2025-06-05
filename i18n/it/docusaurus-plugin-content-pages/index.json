@@ -1,0 +1,10 @@
+{
+  "title": {
+    "message": "DynaGuide",
+    "description": "The title of the homepage"
+  },
+  "tagline": {
+    "message": "Documentazione tecnica dinamica e interattiva",
+    "description": "The tagline of the homepage"
+  }
+}

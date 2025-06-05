@@ -33,7 +33,19 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'pt-BR',
-    locales: ['pt-BR'],
+    locales: ['pt-BR', 'it'],
+    localeConfigs: {
+      'pt-BR': {
+        label: 'Português',
+        direction: 'ltr',
+        htmlLang: 'pt-BR',
+      },
+      'it': {
+        label: 'Italiano',
+        direction: 'ltr',
+        htmlLang: 'it',
+      },
+    },
   },
 
   presets: [
@@ -72,6 +84,10 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Visão Geral',
+        },
+        {
+          type: 'localeDropdown',
+          position: 'right',
         },
         {
           href: 'https://github.com/DynaTools/dynaguide',
