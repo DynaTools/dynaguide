@@ -17,7 +17,19 @@
 
 ## 📖 Sobre o Projeto
 
-O DynaGuide é uma plataforma de documentação técnica especializada em Inteligência Artificial aplicada ao setor de Arquitetura, Engenharia e Construção (AEC). Nossa missão é tornar a IA acessível e prática para profissionais que trabalham com design, modelagem e gestão de projetos construtivos.
+<div align="center">
+<img src="https://dynatools.github.io/dynaguide/img/logo.svg" alt="DynaGuide Logo" width="120">
+</div>
+
+O **DynaGuide** é uma plataforma de documentação técnica especializada em Inteligência Artificial aplicada ao setor de Arquitetura, Engenharia e Construção (AEC). Nossa missão é tornar a IA acessível e prática para profissionais que trabalham com design, modelagem e gestão de projetos construtivos.
+
+### 🌟 Por que DynaGuide?
+
+- **🎯 Focado no AEC**: Conteúdo específico para arquitetos, engenheiros e profissionais da construção
+- **🚀 Prático**: Exemplos reais e aplicáveis no dia a dia profissional  
+- **📚 Completo**: Do básico ao avançado em IA e prompt engineering
+- **🔄 Atualizado**: Conteúdo constantemente atualizado com as últimas tendências
+- **🌐 Acessível**: Interface moderna e navegação intuitiva
 
 ### 🎯 Objetivo
 
@@ -218,11 +230,32 @@ Contribuições são sempre bem-vindas! Para contribuir:
 
 Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
+## 👥 Contribuidores
+
+<div align="center">
+
+[![Contributors](https://contrib.rocks/image?repo=DynaTools/dynaguide)](https://github.com/DynaTools/dynaguide/graphs/contributors)
+
+</div>
+
+Quer se juntar a nós? Veja nosso [Guia de Contribuição](CONTRIBUTING.md)!
+
 ## 🙏 Agradecimentos
 
 - Comunidade Docusaurus pelo excelente framework
 - Profissionais de AEC que contribuíram com feedback
 - Comunidade open source por inspiração e suporte
+- Todos os contribuidores que ajudam a melhorar este projeto
+
+## 📈 Estatísticas do Projeto
+
+<div align="center">
+
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/DynaTools/dynaguide)
+![GitHub last commit](https://img.shields.io/github/last-commit/DynaTools/dynaguide)
+![GitHub repo size](https://img.shields.io/github/repo-size/DynaTools/dynaguide)
+
+</div>
 
 ---
 

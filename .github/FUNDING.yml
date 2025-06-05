@@ -1,0 +1,15 @@
+# .github/FUNDING.yml
+# Configuração para botão "Sponsor" no GitHub
+
+github: # Paulo Giavoni (quando tiver GitHub Sponsors)
+# patreon: # username
+# open_collective: # username
+# ko_fi: # username
+# tidelift: # package-manager/package-name
+# community_bridge: # project-name
+# liberapay: # username
+# issuehunt: # username
+# otechie: # username
+# lfx_crowdfunding: # project-name
+custom: # Lista de URLs customizadas
+  - "https://it.linkedin.com/in/paulogiavoni"
