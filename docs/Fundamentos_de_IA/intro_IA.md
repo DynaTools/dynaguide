@@ -4,9 +4,7 @@ sidebar_position: 1
 
 # Introdução à Inteligência Artificial
 
-Sabe quando você está no meio de um projeto complexo no Revit, com dezenas de sistemas prediais, estruturais e arquitetônicos se entrelaçando, e de repente você pensa: "Seria incrível se o computador pudesse entender o que estou tentando fazer e me ajudar de forma mais inteligente"? Pois bem, essa não é mais apenas uma fantasia. Estamos vivendo um momento extraordinário onde máquinas começam a demonstrar algo que parece muito com inteligência – e isso está transformando radicalmente a forma como trabalhamos.
-
-A Inteligência Artificial não é mais ficção científica. Ela já está aqui, funcionando silenciosamente em aplicativos que usamos todos os dias, desde o autocorretor do seu celular até os algoritmos que sugerem qual série assistir na Netflix. Mas o que realmente significa uma máquina ser "inteligente"? E como isso se conecta com seu trabalho diário de projetar e modelar edificações?
+A Inteligência Artificial está aqui, funcionando silenciosamente em aplicativos que usamos todos os dias, desde o autocorretor do seu celular até os algoritmos que sugerem qual série assistir na Netflix. Mas o que realmente significa uma máquina ser "inteligente"? E como isso se conecta com seu trabalho diário de projetar e modelar edificações?
 
 Vamos começar do básico. Quando falamos de Inteligência Artificial, estamos nos referindo à capacidade de sistemas computacionais realizarem tarefas que, tradicionalmente, exigiriam inteligência humana. É como se déssemos aos computadores não apenas a habilidade de processar dados – coisa que eles sempre fizeram muito bem – mas também de compreender padrões, tomar decisões e até mesmo "aprender" com experiências passadas.
 

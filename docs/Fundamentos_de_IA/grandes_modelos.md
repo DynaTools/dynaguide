@@ -4,8 +4,6 @@ sidebar_position: 2
 
 # Grandes Modelos de Linguagem
 
-Sabe quando você está trabalhando em um projeto complexo no Revit e, de repente, precisa explicar todos os detalhes técnicos para um cliente que nunca ouviu falar de BIM? Você acaba fazendo uma espécie de "tradução simultânea", convertendo jargões técnicos em linguagem que qualquer pessoa consegue entender. Pois bem, é exatamente isso que os Grandes Modelos de Linguagem fazem – só que em uma escala muito maior e com uma capacidade que, até pouco tempo atrás, parecia coisa de ficção científica.
-
 Os Grandes Modelos de Linguagem, ou LLMs como são conhecidos no meio técnico, são sistemas de inteligência artificial capazes de entender e gerar texto de forma surpreendentemente humana. Imagine um assistente incrivelmente inteligente que leu praticamente tudo que já foi escrito na internet – livros, artigos, fóruns, documentações técnicas – e consegue conversar sobre qualquer assunto com a naturalidade de alguém que realmente domina o tema.
 
 ## A Evolução das Arquiteturas

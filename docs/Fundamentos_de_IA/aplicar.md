@@ -4,9 +4,7 @@ sidebar_position: 3
 
 # Aplicações Principais
 
-Sabe quando você abre o Revit de manhã e pensa "nossa, se eu tivesse um assistente inteligente para me ajudar com essas tarefas repetitivas..."? Bem, pode ser que você já tenha isso mais perto do que imagina. Os Large Language Models – esses sistemas de IA que conseguem entender e gerar texto como se fossem humanos – estão revolucionando praticamente todos os setores que você pode imaginar. E não, não estou exagerando.
-
-É como se tivéssemos descoberto uma ferramenta universal que se adapta a diferentes profissões, cada uma aproveitando essa tecnologia de uma forma única. Vamos dar uma olhada em como isso está acontecendo no mundo real, porque entender essas aplicações vai te ajudar a visualizar o potencial que existe no nosso próprio campo.
+Vamos dar uma olhada em como isso está acontecendo no mundo real, porque entender essas aplicações vai te ajudar a visualizar o potencial que existe no nosso próprio campo.
 
 ## Transformando a Medicina
 
