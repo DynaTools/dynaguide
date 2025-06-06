@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'DynaGuide',
   tagline: 'Documentação técnica dinâmica e interativa',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -33,7 +33,7 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'pt-BR',
-    locales: ['pt-BR', 'it'],
+    locales: ['pt-BR'],
     localeConfigs: {
       'pt-BR': {
         label: 'Português',
@@ -75,12 +75,12 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/cover.png',
     navbar: {
       title: 'DynaGuide',
       logo: {
         alt: 'DynaGuide Logo',
-        src: 'img/logo.svg',
+        src: 'img/cover.png',
       },
       items: [
         {

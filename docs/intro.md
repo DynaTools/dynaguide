@@ -3,17 +3,13 @@ sidebar_position: 1
 slug: /
 ---
 
-# Bem-vindo ao DynaGuide 🤖🏗️
+# Livro Aberto - IA para projetistas
 
-**Sua documentação técnica sobre Inteligência Artificial aplicada à Arquitetura, Engenharia e Construção**
+**Sua documentação técnica gratuira sobre Inteligência Artificial aplicada à Arquitetura, Engenharia e Construção. Aqui temos também alguns exemplos avançados de integração com o software Revit e Dynamo.**
 
-## 🎯 O que você encontrará aqui
+![alt text](cover.png)
 
-O **DynaGuide** é sua plataforma completa para aprender e aplicar Inteligência Artificial no setor de Arquitetura, Engenharia e Construção (AEC). Nossa documentação foi criada especificamente para profissionais que trabalham com design, modelagem e gestão de projetos construtivos.
-
-## 🚀 Começando Agora
-
-Escolha seu caminho de aprendizado:
+## O que você encontrará aqui
 
 import DocCard from '@theme/DocCard';
 
@@ -21,64 +17,48 @@ import DocCard from '@theme/DocCard';
   <div className="col col--6">
     <DocCard item={{
       type: 'category',
-      label: 'Fundamentos de IA',
+      label: 'Capítulo 1 - Fundamentos de IA',
       href: '/category/fundamentos-de-ia',
-      description: '3 items'
+      description: 'Conceitos essenciais e introdução aos modelos de linguagem'
     }} />
   </div>
+
   <div className="col col--6">
     <DocCard item={{
       type: 'category',
-      label: 'Engenharia de Prompt',
+      label: 'Capítulo 2 - Engenharia de Prompt',
       href: '/category/engenharia-de-prompt',
-      description: '5 items'
+      description: 'Técnicas avançadas para comunicação com IA'
     }} />
   </div>
+
   <div className="col col--6">
     <DocCard item={{
       type: 'category',
-      label: 'Ferramentas para Aprendizagem de IA',
+      label: 'Capítulo 3 - Ferramentas para IA',
       href: '/category/ferramentas-para-aprendizagem-de-ia',
-      description: '5 items'
+      description: 'Guias práticos e plataformas de desenvolvimento'
     }} />
   </div>
+
   <div className="col col--6">
     <DocCard item={{
       type: 'category',
-      label: 'Analise de Texto com IA',
+      label: 'Capítulo 4 - Análise de Texto com IA',
       href: '/category/analise-de-texto-com-ia',
-      description: '3 items'
+      description: 'Processamento e interpretação inteligente de documentos'
     }} />
   </div>
+
   <div className="col col--6">
     <DocCard item={{
       type: 'category',
-      label: 'Lab - Ferramentas BIM',
+      label: 'Laboratório - Ferramentas BIM',
       href: '/category/lab',
-      description: 'Tutoriais práticos BIM'
+      description: 'Exercícios práticos com Revit e Dynamo'
     }} />
   </div>
 </div>
-
-## 🛠️ O que você vai aprender
-
-### 🔧 Aplicações Práticas
-- Como usar IA para otimizar projetos de arquitetura
-- Automação de tarefas repetitivas em engenharia
-- Geração de documentação técnica inteligente
-- Análise e processamento de textos com IA
-
-### 📚 Conhecimento Técnico
-- Fundamentos de Large Language Models (LLMs)
-- Técnicas avançadas de prompt engineering
-- Domínio de ferramentas como Google AI Studio
-- Formatos de arquivo otimizados para IA (Markdown, JSON, XML)
-
-### 🎯 Casos de Uso Reais
-- Playground prático com modelos de IA
-- Fluxos de trabalho otimizados com IA
-- Processamento inteligente de documentos
-- Soluções para desafios comuns do setor
 
 ## 📧 Precisa de Ajuda?
 

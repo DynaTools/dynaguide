@@ -10,6 +10,12 @@ Vamos começar do básico. Quando falamos de Inteligência Artificial, estamos n
 
 Pense comigo: quando você está detalhando uma escada no Revit, seu cérebro não está apenas calculando números. Você está considerando códigos de edificação, fluxo de pessoas, estética, viabilidade construtiva, integração com outros sistemas... É um processo incrivelmente complexo que envolve conhecimento técnico, experiência prática e até mesmo intuição. Durante décadas, acreditávamos que esse tipo de raciocínio multifacetado era exclusivamente humano.
 
+![Ilustração mostrando pessoas usando o cérebro](image.png)
+*Todos utilizando o cérebro para atividades técnicas, mas também para atividades repetitivas.*
+
+![alt text](image-1.png)
+*Mesmo com os softwares atuais, que eliminou muitas tarefas repetitivas, ainda existem uma carga de repetição com novas caras, e ainda temos que fazer a gestão de muitas informações.*
+
 Mas as coisas começaram a mudar drasticamente nos últimos anos. Pesquisadores descobriram que, quando alimentamos computadores com quantidades massivas de dados e os treinamos usando técnicas sofisticadas, eles começam a desenvolver habilidades surpreendentes. Estudos recentes mostram que alguns sistemas de IA conseguem realizar tarefas que requerem o que chamamos de "Theory of Mind" – a capacidade de entender que outras pessoas têm pensamentos, crenças e intenções diferentes das nossas [1]. 
 
 É fascinante – e um pouco desconcertante – descobrir que modelos como o GPT-3.5 conseguem completar cerca de 93% das tarefas que testam essa habilidade, um desempenho comparável ao de crianças de nove anos [1]. Isso sugere que essas máquinas não estão apenas executando comandos programados, mas desenvolvendo algo que se assemelha a uma compreensão rudimentar de como os humanos pensam.

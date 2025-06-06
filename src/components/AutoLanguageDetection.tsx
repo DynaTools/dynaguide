@@ -16,6 +16,9 @@ export function useAutoLanguageDetection() {
     // Se o usuário já tem preferência, não fazer detecção automática
     if (hasUserPreference) return;
 
+    // Não fazer detecção se já estamos em uma versão localizada
+    if (location.pathname.includes('/it/')) return;
+
     // Detectar apenas na página inicial
     if (location.pathname !== '/' && location.pathname !== '/dynaguide/') return;
 

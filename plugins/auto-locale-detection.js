@@ -21,6 +21,10 @@ module.exports = function (context, options) {
                 
                 // Verificar se estamos na página inicial (incluindo baseUrl)
                 var currentPath = window.location.pathname;
+                
+                // Não fazer detecção se já estamos em uma versão localizada
+                if (currentPath.includes('/it/')) return;
+                
                 var baseUrl = '/dynaguide/';
                 var isHomePage = currentPath === baseUrl || 
                                 currentPath === baseUrl.slice(0, -1) ||
