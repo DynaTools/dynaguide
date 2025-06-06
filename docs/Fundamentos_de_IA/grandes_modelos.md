@@ -16,7 +16,10 @@ Logo depois, em 2019, o Google lançou o **T5** com uma proposta ainda mais ousa
 
 Mas foi com a série **GPT** da OpenAI que as coisas realmente começaram a ficar interessantes para nós, usuários comuns. O GPT-2, lançado em 2019, já impressionava com seus 1,5 bilhão de parâmetros [7]. Depois veio o GPT-3 em 2020, com impressionantes 175 bilhões de parâmetros, demonstrando habilidades quase mágicas de geração de texto [8]. O modelo conseguia escrever artigos, códigos, poesia, e até mesmo simular diferentes estilos de escrita.
 
-O GPT-4, lançado mais recentemente, levou essas capacidades a outro patamar [9]. Além de processar texto, ele consegue "ver" e interpretar imagens, abrindo um mundo de possibilidades completamente novo. É como se tivéssemos finalmente um assistente que não apenas lê, mas também observa e compreende o mundo visual ao nosso redor.
+O GPT-4 já levou essas capacidades a outro patamar [9]. Além de processar texto, ele consegue "ver" e interpretar imagens, abrindo um mundo de possibilidades completamente novo. É como se tivéssemos finalmente um assistente que não apenas lê, mas também observa e compreende o mundo visual ao nosso redor.
+
+Mais recentemente, o ChatGPT O3 trouxe uma precisão impressionante, combinando raciocínio avançado com busca na internet em tempo real, oferecendo um auxílio verdadeiramente prático. Para ilustrar com um exemplo real: quando meu carro quebrou na via A1 em direção a Milão, consegui usar as coordenadas do Google Maps junto com o ChatGPT O3 para calcular a altura exata do quilômetro da via, informação essencial para o guincho chegar ao local correto. 
+
 
 ## A Democratização do Acesso
 
