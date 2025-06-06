@@ -1,0 +1,10 @@
+{
+  "label": "Laboratorio",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Laboratorio di Strumenti BIM - Tutorial pratici e tecniche avanzate per massimizzare l'uso di strumenti BIM come Revit, Dynamo e altre tecnologie correlate."
+  },
+  "collapsed": false,
+  "collapsible": true
+}

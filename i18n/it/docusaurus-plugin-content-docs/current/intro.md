@@ -50,6 +50,14 @@ import DocCard from '@theme/DocCard';
       description: '3 items'
     }} />
   </div>
+  <div className="col col--6">
+    <DocCard item={{
+      type: 'category',
+      label: 'Laboratorio',
+      href: '/category/lab',
+      description: 'Tutorial pratici BIM'
+    }} />
+  </div>
 </div>
 
 ## 🛠️ O que você vai aprender

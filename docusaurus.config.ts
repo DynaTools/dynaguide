@@ -69,6 +69,10 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    './plugins/auto-locale-detection.js',
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -88,6 +92,16 @@ const config: Config = {
         {
           type: 'localeDropdown',
           position: 'right',
+          dropdownItemsAfter: [
+            {
+              type: 'html',
+              value: '<hr style="margin: 0.3rem 0;">',
+            },
+            {
+              href: 'https://github.com/DynaTools/dynaguide/issues',
+              label: 'Ajudar na tradução',
+            },
+          ],
         },
         {
           href: 'https://github.com/DynaTools/dynaguide',

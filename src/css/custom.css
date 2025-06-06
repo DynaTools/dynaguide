@@ -28,3 +28,253 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Custom styles for Lab documentation */
+
+/* Process steps styling */
+.steps {
+  counter-reset: step-counter;
+  padding-left: 0;
+}
+
+.steps li {
+  counter-increment: step-counter;
+  list-style: none;
+  margin-bottom: 1rem;
+  padding-left: 2.5rem;
+  position: relative;
+}
+
+.steps li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--ifm-color-primary);
+  color: white;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Process flow styling */
+.process-flow {
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-left: 4px solid var(--ifm-color-primary);
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .process-flow {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-font-color-base);
+}
+
+/* Advantages grid */
+.advantages-grid table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.advantages-grid td:first-child {
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+  width: 30%;
+}
+
+/* Applications showcase */
+.applications-showcase {
+  background: var(--ifm-background-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.applications-showcase ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.applications-showcase li {
+  background: var(--ifm-color-emphasis-100);
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 3px solid var(--ifm-color-primary);
+}
+
+/* Final result styling */
+.final-result {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.final-result li {
+  margin-bottom: 0.5rem;
+}
+
+/* Result showcase */
+.result-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.result-showcase img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.result-showcase img:hover {
+  transform: scale(1.05);
+}
+
+/* Lab-specific styles */
+.tutorial-grid {
+  margin: 2rem 0;
+}
+
+.tools-grid table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.tools-grid th,
+.tools-grid td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.tools-grid th {
+  background-color: var(--ifm-color-emphasis-100);
+  font-weight: bold;
+}
+
+.tools-grid td:first-child {
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+}
+
+.beginner-tips {
+  background: var(--ifm-color-warning-contrast-background);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-left: 4px solid var(--ifm-color-warning);
+}
+
+.beginner-tips ul {
+  margin-top: 1rem;
+}
+
+.beginner-tips a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Card hover effects */
+.card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card__header h3 {
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-primary);
+}
+
+/* Estilos customizados para tutoriais */
+.steps-container {
+  background: var(--ifm-color-emphasis-100);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border-left: 4px solid var(--ifm-color-primary);
+}
+
+.steps-container li {
+  margin: 0.5rem 0;
+}
+
+/* Grid responsivo para imagens */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Melhorias para cards de vantagens */
+.advantage-card {
+  padding: 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.advantage-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.advantage-card h4 {
+  margin-top: 0;
+  color: var(--ifm-color-primary);
+}
+
+/* Estilos para imagens centralizadas */
+.centered-image {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.centered-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .applications-showcase ul {
+    grid-template-columns: 1fr;
+  }
+  
+  .result-showcase {
+    grid-template-columns: 1fr;
+  }
+  
+  .advantages-grid table {
+    font-size: 0.9rem;
+  }
+}
