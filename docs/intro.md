@@ -7,6 +7,8 @@ slug: /
 
 **Sua documentação técnica gratuira sobre Inteligência Artificial aplicada à Arquitetura, Engenharia e Construção. Aqui temos também alguns exemplos avançados de integração com o software Revit e Dynamo.**
 
+Nosso grupo de Whatsapp Brasil https://chat.whatsapp.com/KzXHctuUqhA4p9OdH2pqk4
+
 ![alt text](cover.png)
 
 ## O que você encontrará aqui
@@ -62,7 +64,6 @@ import DocCard from '@theme/DocCard';
 
 ## 📧 Precisa de Ajuda?
 
-- **💬 Dúvidas gerais:** Use os comentários nas páginas
 - **🐛 Problemas técnicos:** Abra uma [issue no GitHub](https://github.com/DynaTools/dynaguide/issues)
 - **📬 Contato direto:** [LinkedIn - Paulo Giavoni](https://it.linkedin.com/in/paulogiavoni)
 
