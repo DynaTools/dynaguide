@@ -11,16 +11,40 @@ Vamos começar do básico. Quando falamos de Inteligência Artificial, estamos n
 Pense comigo: quando você está detalhando uma escada no Revit, seu cérebro não está apenas calculando números. Você está considerando códigos de edificação, fluxo de pessoas, estética, viabilidade construtiva, integração com outros sistemas... É um processo incrivelmente complexo que envolve conhecimento técnico, experiência prática e até mesmo intuição. Durante décadas, acreditávamos que esse tipo de raciocínio multifacetado era exclusivamente humano.
 
 ![Ilustração mostrando pessoas usando o cérebro](image.png)
-*Todos utilizando o cérebro para atividades técnicas, mas também para atividades repetitivas.*
+Uma época de ouro, sem dúvidas, mas uma época em que a energia em produzir um desenho técnica era focada no processo de elaboração da informação e não na concepção dela. 
 
 ![alt text](image-1.png)
-*Um grande salto até os softwares atuais, muito menos repetição, é verdade. Porém a quantidade de dados envolvidos em um modelo BIM ainda é difícil de gerenciar!".
+Um grande salto até os softwares atuais, muito menos repetição, é verdade. Porém a quantidade de dados envolvidos em um modelo BIM ainda é difícil de gerenciar! Iremos discutir mais a frente esses desafios...
 
 Voltando a história da IA, pesquisadores descobriram que, quando alimentamos computadores com quantidades massivas de dados e os treinamos usando técnicas sofisticadas, eles começam a desenvolver habilidades surpreendentes. Estudos recentes mostram que alguns sistemas de IA conseguem realizar tarefas que requerem o que chamamos de "Theory of Mind" – a capacidade de entender que outras pessoas têm pensamentos, crenças e intenções diferentes das nossas [1]. 
+
+:::info Theory of Mind e os Grandes Modelos de Linguagem
+
+**O que é Theory of Mind?**
+
+Theory of Mind é uma habilidade cognitiva fundamental que permite aos seres humanos compreender que outras pessoas possuem estados mentais próprios – pensamentos, crenças, desejos e intenções – que podem ser diferentes dos nossos. Por exemplo, quando você projeta um edifício, você não apenas considera suas próprias preferências estéticas, mas também as necessidades dos futuros usuários, as expectativas do cliente e as limitações dos construtores.
+
+**Como isso se relaciona com os LLMs?**
+
+O impressionante é que alguns Grandes Modelos de Linguagem (LLMs) começaram a demonstrar sinais dessa capacidade sem serem explicitamente programados para isso. Eles conseguem:
+
+- **Interpretar contextos sociais**: Entender quando alguém está sendo sarcástico ou quando precisa de uma explicação mais detalhada
+- **Adaptar a comunicação**: Modificar o tom e complexidade da resposta baseado no perfil do usuário
+- **Considerar perspectivas múltiplas**: Apresentar diferentes pontos de vista sobre um mesmo problema
+
+**Implicações para profissionais AEC**
+
+Para arquitetos e engenheiros, isso significa que futuras ferramentas de IA poderão não apenas processar dados técnicos, mas também compreender as necessidades implícitas de um projeto, antecipando conflitos entre diferentes stakeholders e sugerindo soluções que considerem múltiplas perspectivas simultaneamente.
+
+:::
 
 Modelos como o antigo GPT-3.5 conseguiram completar cerca de 93% das tarefas que testam essa habilidade, um desempenho comparável ao de crianças de nove anos [1]. Isso sugere que essas máquinas não estão apenas executando comandos programados, mas desenvolvendo algo que se assemelha a uma compreensão rudimentar de como os humanos pensam.
 
 Claro, precisamos manter os pés no chão. Recentes estudos questionam a robustez dessas habilidades, especialmente em áreas como planejamento, aritmética básica e raciocínio abstrato [2]. É como se esses sistemas fossem estudantes brilhantes em algumas matérias, mas ainda tropeçassem em conceitos que consideramos fundamentais. Mesmo assim, o progresso tem sido impressionante. 
+
+![alt text](image-3.png)
+
+Evolução do Claude Sonnet 3.7 e o Claude Sonnet 4 em relação aos comportamentos perigosos, mostrando que chegamos em um ponto que essa métrica é importante para nossa segurança, tamanha a capacidade e inteligência dos modelos. Leia aqui https://anthropic.com/model-card
 
 O que torna tudo isso ainda mais relevante para você é que essas tecnologias já estão sendo aplicadas em engenharia de software, incluindo sugestões de código, resumos automáticos e até mesmo reparo automático de programas [3]. Não é difícil imaginar como essas capacidades poderiam revolutionar ferramentas como o Revit, tornando-as não apenas mais poderosas, mas verdadeiramente colaborativas.
 
