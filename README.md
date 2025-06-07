@@ -7,11 +7,7 @@
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://dynatools.github.io/dynaguide/)
 [![Built with Docusaurus](https://img.shields.io/badge/Built%20with-Docusaurus-blue)](https://docusaurus.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub issues](https://img.shields.io/github/issues/DynaTools/dynaguide)](https://github.com/DynaTools/dynaguide/issues)
-[![GitHub stars](https://img.shields.io/github/stars/DynaTools/dynaguide)](https://github.com/DynaTools/dynaguide/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/DynaTools/dynaguide)](https://github.com/DynaTools/dynaguide/network)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/DynaTools/dynaguide/graphs/commit-activity)
-[![GitHub contributors](https://img.shields.io/github/contributors/DynaTools/dynaguide)](https://github.com/DynaTools/dynaguide/graphs/contributors)
+
 
 </div>
 
@@ -23,60 +19,14 @@
 
 **DynaGuide** is a technical documentation platform specialized in Artificial Intelligence applied to the Architecture, Engineering, and Construction (AEC) sector. Our mission is to make AI accessible and practical for professionals working with design, modeling, and construction project management.
 
-### 🌟 Why DynaGuide?
-
-- **🎯 AEC-Focused**: Specific content for architects, engineers, and construction professionals
-- **🚀 Practical**: Real examples applicable in daily professional work
-- **📚 Comprehensive**: From basic to advanced AI and prompt engineering
-- **🔄 Updated**: Content constantly updated with the latest trends
-- **🌐 Accessible**: Modern interface and intuitive navigation
-- **🛠️ Hands-on Labs**: Interactive experiments and practical implementations
-- **📖 Multi-language**: Support for internationalization (Italian available)
-- **🔍 Advanced Search**: Powered by Algolia for better content discovery
-
 ### 🎯 Objective
 
 Empower architects, engineers, and construction professionals to use AI tools efficiently and strategically in their projects, from initial concept to project execution.
-
-## ✨ Key Features
-
-### 📖 Comprehensive Documentation
-- **AI Fundamentals**: Deep dive into AI concepts with AEC context
-- **Prompt Engineering**: Advanced techniques for effective AI communication
-- **Practical Tools**: Real-world applications and tool comparisons
-- **Laboratory Experiments**: Hands-on learning with Dynamo and parametric modeling
-
-### 🌐 Modern Technology Stack
-- Built with Docusaurus 3.8.0 for optimal performance
-- React 18.2 for dynamic and interactive components
-- TypeScript support for better development experience
-- Responsive design for all devices
-
-### 🔍 Enhanced User Experience
-- Advanced search functionality with Algolia
-- Automatic language detection
-- Clean and intuitive navigation
-- Rich multimedia content with images and examples
-
-### 📱 Multi-platform Access
-- Optimized for desktop, tablet, and mobile
-- Fast loading times with static site generation
-- SEO optimized for better discoverability
-- Progressive Web App capabilities
 
 ## 🚀 Quick Access
 
 **🌐 Main Site:** [https://dynatools.github.io/dynaguide/](https://dynatools.github.io/dynaguide/)
 
-## 📚 Content Structure
-
-### 🏠 [Home Page](https://dynatools.github.io/dynaguide/)
-Introduction to the project and overview of available features.
-
-### 📋 [Overview](https://dynatools.github.io/dynaguide/docs/intro)
-Introduction guide and first steps to navigate the documentation.
-
----
 
 ## 🧠 AI Fundamentals
 
@@ -200,15 +150,6 @@ Advanced techniques for text processing and analysis using AI in construction co
 
 Articles, tutorials, and news about AI applied to the construction industry.
 
-### 📰 Recent Articles:
-
-- [🎉 Welcome to DynaGuide](https://dynatools.github.io/dynaguide/blog/welcome)
-- [📝 Advanced MDX Features](https://dynatools.github.io/dynaguide/blog/mdx-blog-post)
-- [📖 Long Implementation Guide](https://dynatools.github.io/dynaguide/blog/long-blog-post)
-- [🚀 First Blog Post](https://dynatools.github.io/dynaguide/blog/first-blog-post)
-
----
-
 ## 🛠️ Technologies Used
 
 - **[Docusaurus 3.8.0](https://docusaurus.io/)** - Static documentation framework
@@ -276,131 +217,12 @@ npm run deploy
 - **TypeScript**: Full TypeScript support for better development experience
 - **MDX Support**: Write JSX directly in Markdown files
 - **Plugin System**: Easily extendable with Docusaurus plugins
-
-## 📁 Project Structure
-
 ```
-dynaguide/
-├── docs/                          # Main documentation
-│   ├── intro.md                   # Introduction page
-│   ├── cover.png                  # Cover image
-│   ├── Fundamentos_de_IA/         # AI Fundamentals section
-│   │   ├── _category_.json        # Section configuration
-│   │   ├── intro_IA.md           # Introduction to AI
-│   │   ├── grandes_modelos.md     # Large Language Models
-│   │   ├── aplicar.md            # How to Apply AI
-│   │   └── image*.png            # Section images
-│   ├── Prompt/                    # Prompt Engineering section
-│   │   ├── _category_.json        # Section configuration
-│   │   ├── oquee.md              # What is a Prompt
-│   │   ├── 2-tecnicas-basicas.md  # Basic Techniques
-│   │   ├── 3-prompts-ingles.md    # English vs Portuguese
-│   │   ├── 4-agentes.md          # Agents and Automation
-│   │   ├── 5-seguranca.md        # Security and Best Practices
-│   │   └── img/                  # Section images
-│   ├── Ferramentas/              # Tools section
-│   │   ├── _category_.json        # Section configuration
-│   │   ├── 3.0.md → 3.4.md       # Tool documentation
-│   ├── Lab/                      # Laboratory section
-│   │   ├── _category_.json        # Section configuration
-│   │   ├── intro.md              # Lab introduction
-│   │   ├── Dynamo_time.md        # Dynamo experiments
-│   │   ├── FamiliaPivo.md        # Family modeling
-│   │   └── img/                  # Lab images
-│   └── Textos/                   # Text Analysis section
-│       ├── _category_.json        # Section configuration
-│       └── 4.0.md → 4.2.md       # Text analysis content
-├── blog/                          # Articles and posts
-│   ├── authors.yml               # Author information
-│   ├── tags.yml                  # Tag definitions
-│   └── *.md                      # Blog articles
-├── src/                           # React source code
-│   ├── components/               # Custom components
-│   │   ├── AutoLanguageDetection.tsx
-│   │   └── HomepageFeatures/
-│   ├── css/                      # Global styles
-│   ├── data/                     # Data configurations
-│   ├── pages/                    # Custom pages
-│   └── theme/                    # Theme customizations
-├── static/                        # Static files
-│   └── img/                      # Images and assets
-├── i18n/                         # Internationalization
-│   └── it/                       # Italian translation
-├── plugins/                      # Custom plugins
-├── build/                        # Production build
-├── docusaurus.config.ts          # Main configuration
-├── sidebars.ts                   # Navigation structure
-├── tsconfig.json                 # TypeScript configuration
-└── package.json                  # Dependencies and scripts
 ```
-
-## 🤝 Contributing
-
-Contributions are always welcome! To contribute:
-
-1. **Fork** the project
-2. Create a **branch** for your feature (`git checkout -b feature/AmazingFeature`)
-3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** to the branch (`git push origin feature/AmazingFeature`)
-5. Open a **Pull Request**
-
-### Contribution Guidelines
-
-- Keep focus on AI applied to the AEC sector
-- Use clear and accessible language
-- Include practical examples whenever possible
-- Test locally before submitting
-- Follow existing naming conventions
-
-## 📧 Contact and Support
+### 📧 Contact and Support
 
 ### 👨‍💼 Author
 **Paulo Giavoni**
 - LinkedIn: [paulo-giavoni](https://it.linkedin.com/in/paulogiavoni)
 - Organization: [DynaTools](https://github.com/DynaTools)
-
-### 🔗 Important Links
-- **Repository:** [https://github.com/DynaTools/dynaguide](https://github.com/DynaTools/dynaguide)
-- **Website:** [https://dynatools.github.io/dynaguide/](https://dynatools.github.io/dynaguide/)
-- **Issues:** [https://github.com/DynaTools/dynaguide/issues](https://github.com/DynaTools/dynaguide/issues)
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👥 Contributors
-
-<div align="center">
-
-[![Contributors](https://contrib.rocks/image?repo=DynaTools/dynaguide)](https://github.com/DynaTools/dynaguide/graphs/contributors)
-
-</div>
-
-Want to join us? Check our [Contributing Guide](CONTRIBUTING.md)!
-
-## 🙏 Acknowledgments
-
-- Docusaurus community for the excellent framework
-- AEC professionals who contributed with feedback
-- Open source community for inspiration and support
-- All contributors who help improve this project
-
-## 📈 Project Statistics
-
-<div align="center">
-
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/DynaTools/dynaguide)
-![GitHub last commit](https://img.shields.io/github/last-commit/DynaTools/dynaguide)
-![GitHub repo size](https://img.shields.io/github/repo-size/DynaTools/dynaguide)
-
-</div>
-
----
-
-<div align="center">
-
-**Built with ❤️ by [DynaTools](https://github.com/DynaTools)**
-
-*Transforming how AEC professionals interact with Artificial Intelligence*
-
-</div>
+```

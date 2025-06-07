@@ -1,0 +1,10 @@
+{
+  "label": "Papers",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "title": "Artigos para Leitura",
+    "description": "Artigos mais recentes para download ou leitura direta online.",
+    "slug": "/category/papers"
+  }
+}
