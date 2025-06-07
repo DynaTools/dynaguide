@@ -30,10 +30,39 @@
 - **📚 Comprehensive**: From basic to advanced AI and prompt engineering
 - **🔄 Updated**: Content constantly updated with the latest trends
 - **🌐 Accessible**: Modern interface and intuitive navigation
+- **🛠️ Hands-on Labs**: Interactive experiments and practical implementations
+- **📖 Multi-language**: Support for internationalization (Italian available)
+- **🔍 Advanced Search**: Powered by Algolia for better content discovery
 
 ### 🎯 Objective
 
 Empower architects, engineers, and construction professionals to use AI tools efficiently and strategically in their projects, from initial concept to project execution.
+
+## ✨ Key Features
+
+### 📖 Comprehensive Documentation
+- **AI Fundamentals**: Deep dive into AI concepts with AEC context
+- **Prompt Engineering**: Advanced techniques for effective AI communication
+- **Practical Tools**: Real-world applications and tool comparisons
+- **Laboratory Experiments**: Hands-on learning with Dynamo and parametric modeling
+
+### 🌐 Modern Technology Stack
+- Built with Docusaurus 3.8.0 for optimal performance
+- React 18.2 for dynamic and interactive components
+- TypeScript support for better development experience
+- Responsive design for all devices
+
+### 🔍 Enhanced User Experience
+- Advanced search functionality with Algolia
+- Automatic language detection
+- Clean and intuitive navigation
+- Rich multimedia content with images and examples
+
+### 📱 Multi-platform Access
+- Optimized for desktop, tablet, and mobile
+- Fast loading times with static site generation
+- SEO optimized for better discoverability
+- Progressive Web App capabilities
 
 ## 🚀 Quick Access
 
@@ -60,6 +89,8 @@ Section dedicated to fundamental concepts of Artificial Intelligence applied to 
 #### 1. [🎯 Introduction to Artificial Intelligence](https://dynatools.github.io/dynaguide/docs/Fundamentos_de_IA/intro_IA)
 - Basic AI concepts in accessible language
 - How AI relates to the daily work of architects and engineers
+- Theory of Mind and Large Language Models
+- Evolution of AI capabilities and their implications for AEC professionals
 - Practical examples in construction project contexts
 - Technology demystification for technical professionals
 
@@ -74,8 +105,6 @@ Section dedicated to fundamental concepts of Artificial Intelligence applied to 
 - AI-optimized workflows
 - Recommended tools for each type of task
 - Specific use cases for AEC professionals
-
-
 
 ---
 
@@ -119,6 +148,52 @@ Section specialized in advanced techniques for creating and optimizing effective
 
 ---
 
+## 🛠️ Tools and Technologies
+
+**📁 [Category: Tools](https://dynatools.github.io/dynaguide/docs/category/ferramentas)**
+
+Specific section about AI tools and technologies for AEC professionals.
+
+### 📖 Available Pages:
+
+#### 1. [Tool Overview 3.0](https://dynatools.github.io/dynaguide/docs/Ferramentas/3.0)
+#### 2. [Advanced Features 3.1](https://dynatools.github.io/dynaguide/docs/Ferramentas/3.1)
+#### 3. [Integration Strategies 3.2](https://dynatools.github.io/dynaguide/docs/Ferramentas/3.2)
+#### 4. [Workflow Optimization 3.3](https://dynatools.github.io/dynaguide/docs/Ferramentas/3.3)
+#### 5. [Advanced Applications 3.4](https://dynatools.github.io/dynaguide/docs/Ferramentas/3.4)
+
+---
+
+## 🧪 Lab Section
+
+**📁 [Category: Lab](https://dynatools.github.io/dynaguide/docs/category/lab)**
+
+Hands-on experiments and practical implementations for learning through practice.
+
+### 📖 Available Pages:
+
+#### 1. [Lab Introduction](https://dynatools.github.io/dynaguide/docs/Lab/intro)
+#### 2. [Dynamo Time](https://dynatools.github.io/dynaguide/docs/Lab/Dynamo_time)
+- Practical Dynamo scripting with AI assistance
+#### 3. [Familia Pivo](https://dynatools.github.io/dynaguide/docs/Lab/FamiliaPivo)
+- Family creation and parametric modeling experiments
+
+---
+
+## 📝 Text Analysis with AI
+
+**📁 [Category: Text Analysis](https://dynatools.github.io/dynaguide/docs/category/analise-de-texto-com-ia)**
+
+Advanced techniques for text processing and analysis using AI in construction contexts.
+
+### 📖 Available Pages:
+
+#### 1. [Text Processing 4.0](https://dynatools.github.io/dynaguide/docs/Textos/4.0)
+#### 2. [Document Analysis 4.1](https://dynatools.github.io/dynaguide/docs/Textos/4.1)
+#### 3. [Advanced Techniques 4.2](https://dynatools.github.io/dynaguide/docs/Textos/4.2)
+
+---
+
 ## 📝 Blog
 
 **📰 [Blog Section](https://dynatools.github.io/dynaguide/blog)**
@@ -136,42 +211,71 @@ Articles, tutorials, and news about AI applied to the construction industry.
 
 ## 🛠️ Technologies Used
 
-- **[Docusaurus 3.0](https://docusaurus.io/)** - Static documentation framework
-- **[React](https://reactjs.org/)** - JavaScript library for interface
+- **[Docusaurus 3.8.0](https://docusaurus.io/)** - Static documentation framework
+- **[React 18.2.0](https://reactjs.org/)** - JavaScript library for interface
 - **[TypeScript](https://www.typescriptlang.org/)** - Typed language for JavaScript
+- **[MDX 3.0](https://mdxjs.com/)** - Enhanced Markdown with React components
 - **[GitHub Actions](https://github.com/features/actions)** - Automated CI/CD
 - **[GitHub Pages](https://pages.github.com/)** - Free static hosting
+- **[Algolia Search](https://www.algolia.com/)** - Advanced search functionality
 
 ## 🚀 Local Development
 
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/en/download/) version 18.0 or higher
-- npm or yarn as package manager
+- npm (included with Node.js) or yarn as package manager
+- Git for version control
 
 ### Installation
 
 ```bash
+# Clone the repository
 git clone https://github.com/DynaTools/dynaguide.git
+
+# Navigate to project directory
 cd dynaguide
+
+# Install dependencies
 npm install
+
+# Or using yarn
+yarn install
 ```
 
-### Run in Development
+### Available Scripts
 
 ```bash
+# Start development server
 npm start
-```
+# The site will automatically open at http://localhost:3000
 
-The site will automatically open at `http://localhost:3000`.
-
-### Production Build
-
-```bash
+# Build for production
 npm run build
+# Optimized files will be generated in the build/ folder
+
+# Serve production build locally
+npm run serve
+
+# Clear Docusaurus cache
+npm run clear
+
+# Type checking
+npm run typecheck
+
+# Generate translation files
+npm run write-translations
+
+# Deploy to GitHub Pages (requires proper setup)
+npm run deploy
 ```
 
-Optimized files will be generated in the `build/` folder.
+### Development Tips
+
+- **Hot Reload**: Changes are automatically reflected in the browser
+- **TypeScript**: Full TypeScript support for better development experience
+- **MDX Support**: Write JSX directly in Markdown files
+- **Plugin System**: Easily extendable with Docusaurus plugins
 
 ## 📁 Project Structure
 
@@ -179,21 +283,55 @@ Optimized files will be generated in the `build/` folder.
 dynaguide/
 ├── docs/                          # Main documentation
 │   ├── intro.md                   # Introduction page
-│   ├── Fundamentos_de_IA/         # Fundamentals section
-│   │   ├── intro_IA.md
-│   │   ├── grandes_modelos.md
-│   │   └── aplicar.md
-│   └── Prompt/                    # Prompt engineering section
-│       ├── oquee.md
-│       ├── 2-tecnicas-basicas.md
-│       ├── 3-prompts-ingles.md
-│       ├── 4-agentes.md
-│       └── 5-seguranca.md
+│   ├── cover.png                  # Cover image
+│   ├── Fundamentos_de_IA/         # AI Fundamentals section
+│   │   ├── _category_.json        # Section configuration
+│   │   ├── intro_IA.md           # Introduction to AI
+│   │   ├── grandes_modelos.md     # Large Language Models
+│   │   ├── aplicar.md            # How to Apply AI
+│   │   └── image*.png            # Section images
+│   ├── Prompt/                    # Prompt Engineering section
+│   │   ├── _category_.json        # Section configuration
+│   │   ├── oquee.md              # What is a Prompt
+│   │   ├── 2-tecnicas-basicas.md  # Basic Techniques
+│   │   ├── 3-prompts-ingles.md    # English vs Portuguese
+│   │   ├── 4-agentes.md          # Agents and Automation
+│   │   ├── 5-seguranca.md        # Security and Best Practices
+│   │   └── img/                  # Section images
+│   ├── Ferramentas/              # Tools section
+│   │   ├── _category_.json        # Section configuration
+│   │   ├── 3.0.md → 3.4.md       # Tool documentation
+│   ├── Lab/                      # Laboratory section
+│   │   ├── _category_.json        # Section configuration
+│   │   ├── intro.md              # Lab introduction
+│   │   ├── Dynamo_time.md        # Dynamo experiments
+│   │   ├── FamiliaPivo.md        # Family modeling
+│   │   └── img/                  # Lab images
+│   └── Textos/                   # Text Analysis section
+│       ├── _category_.json        # Section configuration
+│       └── 4.0.md → 4.2.md       # Text analysis content
 ├── blog/                          # Articles and posts
+│   ├── authors.yml               # Author information
+│   ├── tags.yml                  # Tag definitions
+│   └── *.md                      # Blog articles
 ├── src/                           # React source code
+│   ├── components/               # Custom components
+│   │   ├── AutoLanguageDetection.tsx
+│   │   └── HomepageFeatures/
+│   ├── css/                      # Global styles
+│   ├── data/                     # Data configurations
+│   ├── pages/                    # Custom pages
+│   └── theme/                    # Theme customizations
 ├── static/                        # Static files
-├── docusaurus.config.ts           # Main configuration
-└── sidebars.ts                    # Navigation structure
+│   └── img/                      # Images and assets
+├── i18n/                         # Internationalization
+│   └── it/                       # Italian translation
+├── plugins/                      # Custom plugins
+├── build/                        # Production build
+├── docusaurus.config.ts          # Main configuration
+├── sidebars.ts                   # Navigation structure
+├── tsconfig.json                 # TypeScript configuration
+└── package.json                  # Dependencies and scripts
 ```
 
 ## 🤝 Contributing
