@@ -4,26 +4,23 @@ slug: /
 ---
 # Summary
 # Open Book - AI for Designers
-by Paulo Giavoni 
 
 **Your free technical documentation on Artificial Intelligence applied to Architecture, Engineering, and Construction. Here you will also find some advanced examples of integration with Revit and Dynamo software.**
-
-Our Brazilian WhatsApp group: https://chat.whatsapp.com/KzXHctuUqhA4p9OdH2pqk4
 
 ![alt text](cover.png)
 
 ## Table of Contents
 
-### [AI Fundamentals](/category/fundamentos-de-ia)
+### [AI Fundamentals](/category/ai-fundamentals)
 Essential concepts and introduction to language models
 
-### [Prompt Engineering](/category/engenharia-de-prompt)
+### [Prompt Engineering](/category/prompt-engineering)
 Advanced techniques for communicating with AI
 
-### [Tools for AI](/category/ferramentas-para-aprendizagem-de-ia)
+### [Tools for AI](/category/ai-practice)
 Practical guides and development platforms
 
-### [Text Analysis with AI](/category/analise-de-texto-com-ia)
+### [Text Analysis with AI](/category/ai-text-analysis)
 Intelligent processing and interpretation of documents
 
 ### [Lab - BIM Tools](/category/lab)
