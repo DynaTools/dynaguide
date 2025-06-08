@@ -23,22 +23,25 @@
 ## 📚 Table of Contents
 
 ### [🧠 AI Fundamentals](https://dynatools.github.io/dynaguide/category/ai-fundamentals)
-Essential concepts and introduction to language models
+Essential concepts and introduction to language models - covering AI applications, introduction to AI, and large language models
 
 ### [🎨 Prompt Engineering](https://dynatools.github.io/dynaguide/category/prompt-engineering)
-Advanced techniques for communicating with AI
+Advanced techniques for communicating with AI - including AI agents, basic techniques, English prompts, and security considerations
 
 ### [🛠️ AI Practice](https://dynatools.github.io/dynaguide/category/ai-practice)
-Practical guides and development platforms
+Practical guides and development platforms - AI coding tools, image tools, voice tools, ChatGPT alternatives, and Hugging Face integration
 
 ### [📝 AI Text Analysis](https://dynatools.github.io/dynaguide/category/ai-text-analysis)
-Intelligent processing and interpretation of documents
+Intelligent processing and interpretation of documents - document analysis, text processing, and practical applications
 
-### [🧪 Lab - BIM Tools](https://dynatools.github.io/dynaguide/category/lab)
-Practical exercises with Revit and Dynamo
+### [🏗️ BIM Tools](https://dynatools.github.io/dynaguide/category/bim-tools)
+Practical tutorials with Revit and Dynamo - including parametric families, scripting strategies, and scheduling techniques
+
+### [⚙️ Revit API](https://dynatools.github.io/dynaguide/category/revit-api)
+Comprehensive guides for Revit API development - element collection, UI selection, filtering techniques, and advanced programming methods
 
 ### [📄 Papers](https://dynatools.github.io/dynaguide/category/papers)
-Academic articles and reference papers on AI
+Academic articles and reference papers on AI - including studies on AI hallucination and the illusion of thinking
 
 ---
 

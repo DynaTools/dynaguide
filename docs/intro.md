@@ -11,23 +11,26 @@ slug: /
 
 ## Table of Contents
 
-### [AI Fundamentals](/category/ai-fundamentals)
-Essential concepts and introduction to language models
+### [🧠 AI Fundamentals](/category/ai-fundamentals)
+Essential concepts and introduction to language models - covering AI applications, introduction to AI, and large language models
 
-### [Prompt Engineering](/category/prompt-engineering)
-Advanced techniques for communicating with AI
+### [🎨 Prompt Engineering](/category/prompt-engineering)
+Advanced techniques for communicating with AI - including AI agents, basic techniques, English prompts, and security considerations
 
-### [Tools for AI](/category/ai-practice)
-Practical guides and development platforms
+### [🛠️ AI Practice](/category/ai-practice)
+Practical guides and development platforms - AI coding tools, image tools, voice tools, ChatGPT alternatives, and Hugging Face integration
 
-### [Text Analysis with AI](/category/ai-text-analysis)
-Intelligent processing and interpretation of documents
+### [📝 AI Text Analysis](/category/ai-text-analysis)
+Intelligent processing and interpretation of documents - document analysis, text processing, and practical applications
 
-### [BIM Tools](/category/bim-tools)
-Practical exercises with Revit and Dynamo
+### [🏗️ BIM Tools](/category/bim-tools)
+Practical tutorials with Revit and Dynamo - including parametric families, scripting strategies, and scheduling techniques
 
-### [Papers](/category/papers)
-Academic articles and reference papers on AI
+### [⚙️ Revit API](/category/revit-api)
+Comprehensive guides for Revit API development - element collection, UI selection, filtering techniques, and advanced programming methods
+
+### [📄 Papers](/category/papers)
+Academic articles and reference papers on AI - including studies on AI hallucination and the illusion of thinking
 
 
 
