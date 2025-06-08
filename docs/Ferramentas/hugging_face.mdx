@@ -1,0 +1,126 @@
+---
+id: huggingface-colab-tutorial
+title: 'Executar Modelos Hugging Face no Google Colab'
+sidebar_label: 'Hugging Face + Colab'
+sidebar_position: 6
+slug: /huggingface-colab
+description: Tutorial passo a passo para abrir modelos da Hugging Face em um notebook Google Colab com um clique.
+keywords:
+  - hugging face
+  - google colab
+  - IA
+  - notebook
+  - Colab
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+## Visão Geral
+
+O Google Colab e a Hugging Face **adicionaram um botão “Open&nbsp;in&nbsp;Colab” em todas as _model cards_** do Hub.  
+Com um clique, você gera um notebook pré‑configurado para **carregar, testar e até _fine‑tunear_** qualquer modelo — dispensando _boilerplate_ e acelerando experimentos. ([medium.com](https://medium.com/google-colab/launch-hugging-face-models-in-colab-for-faster-ai-exploration-bee261978cf9))
+
+## Pré‑requisitos
+
+- Conta Google para acessar o **[Colab](https://colab.research.google.com)**
+- Conta Hugging Face (opcional, mas recomendada para salvar _tokens_ e modelos privados)
+- Navegador atualizado
+
+:::tip BOM SABER
+Caso você seja autor de modelos, basta incluir um arquivo `notebook.ipynb` na raiz do repositório para que ele seja usado em vez do notebook gerado automaticamente. ([medium.com](https://medium.com/google-colab/launch-hugging-face-models-in-colab-for-faster-ai-exploration-bee261978cf9))
+:::
+
+## Passo a Passo
+
+### 1. Escolha o modelo
+
+Acesse qualquer _model card_ no Hub, por exemplo:
+
+```
+https://huggingface.co/google/gemma-3-27b-it
+```
+
+### 2. Abra no Colab
+
+Clique em **Use this model → Open in Colab**  
+ou simplesmente acrescente `/colab` ao final do URL:
+
+```
+https://huggingface.co/google/gemma-3-27b-it/colab
+```
+
+### 3. Configure o ambiente
+
+No notebook gerado, vá em **Runtime ▸ Change runtime type** e selecione **GPU** (ou **TPU** se disponível).
+
+> GPUs gratuitas no Colab são suficientes para *inference* na maioria dos modelos baseados em Transformers.
+
+### 4. Execute as células
+
+A primeira célula geralmente instala dependências:
+
+```python
+!pip install -q transformers accelerate
+```
+
+Em seguida, experimente o modelo:
+
+```python
+from transformers import pipeline
+pipe = pipeline("text-generation", model="google/gemma-3-27b-it")
+print(pipe("Olá, tudo bem?")[0]['generated_text'])
+```
+
+### 5. Personalize
+
+- **Substitua o `model=`** por outro ID da Hugging Face
+- Ajuste parâmetros como `max_new_tokens`, `temperature`, `top_p`
+- Faça _fine‑tuning_ adicionando sua própria etapa de treinamento
+
+<Tabs>
+<TabItem value="CLI" label="Via CLI">
+  
+```bash
+pip install huggingface_hub
+export MODEL_ID=google/gemma-3-27b-it
+python - <<'PY'
+from huggingface_hub import InferenceClient
+client = InferenceClient(model="$MODEL_ID")
+print(client.text_generation("Olá, mundo!"))
+PY
+```
+
+</TabItem>
+<TabItem value="Python" label="Python">
+  
+```python
+from huggingface_hub import InferenceClient
+client = InferenceClient(model="google/gemma-3-27b-it")
+client.text_generation("Olá, mundo!")
+```
+
+</TabItem>
+</Tabs>
+
+## Para Autores de Modelos
+
+1. Crie ou suba `notebook.ipynb` demonstrando uso avançado do seu modelo.  
+2. _Commit_ no mesmo repositório; o Hub prioriza esse arquivo sobre o gerado.  
+3. O botão “Open in Colab” apontará para seu notebook personalizado.
+
+## Próximos Passos
+
+- Explore o **[Hugging Face Spaces](https://huggingface.co/spaces)** para demos interativas
+- Integre Colab com **[Kaggle Datasets](https://www.kaggle.com/datasets)** para dados grandes
+- Leia o anúncio oficial no Medium para entender a motivação completa. ([medium.com](https://medium.com/google-colab/launch-hugging-face-models-in-colab-for-faster-ai-exploration-bee261978cf9))
+
+## Recursos
+
+- [Anúncio no Medium](https://medium.com/google-colab/launch-hugging-face-models-in-colab-for-faster-ai-exploration-bee261978cf9)
+- [Documentação Hugging Face Hub](https://huggingface.co/docs/huggingface_hub)
+- [Transformers Quick Start](https://huggingface.co/docs/transformers/quickstart)
+- [Colab FAQ](https://research.google.com/colaboratory/faq.html)
+
+---
+*Tutorial criado em 08 de junho de 2025 a partir do artigo do Google Colab*.

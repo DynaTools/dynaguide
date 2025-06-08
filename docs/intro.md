@@ -2,7 +2,7 @@
 sidebar_position: 1
 slug: /
 ---
-
+# Sumário
 # Livro Aberto - IA para projetistas
 
 **Sua documentação técnica gratuira sobre Inteligência Artificial aplicada à Arquitetura, Engenharia e Construção. Aqui temos também alguns exemplos avançados de integração com o software Revit e Dynamo.**
@@ -11,56 +11,27 @@ Nosso grupo de Whatsapp Brasil https://chat.whatsapp.com/KzXHctuUqhA4p9OdH2pqk4
 
 ![alt text](cover.png)
 
-## O que você encontrará aqui
+## Sumário
 
-import DocCard from '@theme/DocCard';
+### [Capítulo 1 - Fundamentos de IA](/category/fundamentos-de-ia)
+Conceitos essenciais e introdução aos modelos de linguagem
 
-<div className="row">
-  <div className="col col--6">
-    <DocCard item={{
-      type: 'category',
-      label: 'Capítulo 1 - Fundamentos de IA',
-      href: '/category/fundamentos-de-ia',
-      description: 'Conceitos essenciais e introdução aos modelos de linguagem'
-    }} />
-  </div>
+### [Capítulo 2 - Engenharia de Prompt](/category/engenharia-de-prompt)
+Técnicas avançadas para comunicação com IA
 
-  <div className="col col--6">
-    <DocCard item={{
-      type: 'category',
-      label: 'Capítulo 2 - Engenharia de Prompt',
-      href: '/category/engenharia-de-prompt',
-      description: 'Técnicas avançadas para comunicação com IA'
-    }} />
-  </div>
+### [Capítulo 3 - Ferramentas para IA](/category/ferramentas-para-aprendizagem-de-ia)
+Guias práticos e plataformas de desenvolvimento
 
-  <div className="col col--6">
-    <DocCard item={{
-      type: 'category',
-      label: 'Capítulo 3 - Ferramentas para IA',
-      href: '/category/ferramentas-para-aprendizagem-de-ia',
-      description: 'Guias práticos e plataformas de desenvolvimento'
-    }} />
-  </div>
+### [Capítulo 4 - Análise de Texto com IA](/category/analise-de-texto-com-ia)
+Processamento e interpretação inteligente de documentos
 
-  <div className="col col--6">
-    <DocCard item={{
-      type: 'category',
-      label: 'Capítulo 4 - Análise de Texto com IA',
-      href: '/category/analise-de-texto-com-ia',
-      description: 'Processamento e interpretação inteligente de documentos'
-    }} />
-  </div>
+### [Capítulo 5 - Papers](/category/papers)
+Artigos acadêmicos e papers de referência sobre IA
 
-  <div className="col col--6">
-    <DocCard item={{
-      type: 'category',
-      label: 'Laboratório - Ferramentas BIM',
-      href: '/category/lab',
-      description: 'Exercícios práticos com Revit e Dynamo'
-    }} />
-  </div>
-</div>
+### [Laboratório - Ferramentas BIM](/category/lab)
+Exercícios práticos com Revit e Dynamo
+
+---
 
 ## 📧 Precisa de Ajuda?
 

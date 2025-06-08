@@ -11,12 +11,12 @@ Vamos começar do básico. Quando falamos de Inteligência Artificial, estamos n
 Pense comigo: quando você está detalhando uma escada no Revit, seu cérebro não está apenas calculando números. Você está considerando códigos de edificação, fluxo de pessoas, estética, viabilidade construtiva, integração com outros sistemas... É um processo incrivelmente complexo que envolve conhecimento técnico, experiência prática e até mesmo intuição. Durante décadas, acreditávamos que esse tipo de raciocínio multifacetado era exclusivamente humano.
 
 ![Ilustração mostrando pessoas usando o cérebro](image.png)
-Uma época de ouro, sem dúvidas, mas uma época em que a energia em produzir um desenho técnica era focada no processo de elaboração da informação e não na concepção dela. 
+Uma época de ouro, sem dúvidas, mas uma época em que a energia em produzir um desenho técnico era focada no processo de elaboração da informação e não na concepção dela. 
 
 ![alt text](image-1.png)
-Um grande salto até os softwares atuais, muito menos repetição, é verdade. Porém a quantidade de dados envolvidos em um modelo BIM ainda é difícil de gerenciar! Iremos discutir mais a frente esses desafios...
+Um grande salto até os softwares atuais, muito menos repetição, é verdade. Porém a quantidade de dados envolvidos em um modelo BIM ainda é difícil de gerenciar! Iremos discutir mais adiante esses desafios...
 
-Voltando a história da IA, pesquisadores descobriram que, quando alimentamos computadores com quantidades massivas de dados e os treinamos usando técnicas sofisticadas, eles começam a desenvolver habilidades surpreendentes. Estudos recentes mostram que alguns sistemas de IA conseguem realizar tarefas que requerem o que chamamos de "Theory of Mind" – a capacidade de entender que outras pessoas têm pensamentos, crenças e intenções diferentes das nossas [1]. 
+Voltando à história da IA, pesquisadores descobriram que, quando alimentamos computadores com quantidades massivas de dados e os treinamos usando técnicas sofisticadas, eles começam a desenvolver habilidades surpreendentes. Estudos recentes mostram que alguns sistemas de IA conseguem realizar tarefas que requerem o que chamamos de "Theory of Mind" – a capacidade de entender que outras pessoas têm pensamentos, crenças e intenções diferentes das nossas [1]. 
 
 :::info Theory of Mind e os Grandes Modelos de Linguagem
 
@@ -40,22 +40,25 @@ Para arquitetos e engenheiros, isso significa que futuras ferramentas de IA pode
 
 Modelos como o antigo GPT-3.5 conseguiram completar cerca de 93% das tarefas que testam essa habilidade, um desempenho comparável ao de crianças de nove anos [1]. Isso sugere que essas máquinas não estão apenas executando comandos programados, mas desenvolvendo algo que se assemelha a uma compreensão rudimentar de como os humanos pensam.
 
-Claro, precisamos manter os pés no chão. Recentes estudos questionam a robustez dessas habilidades, especialmente em áreas como planejamento, aritmética básica e raciocínio abstrato [2]. É como se esses sistemas fossem estudantes brilhantes em algumas matérias, mas ainda tropeçassem em conceitos que consideramos fundamentais. Mesmo assim, o progresso tem sido impressionante. 
+Claro, precisamos manter os pés no chão. Estudos recentes questionam a robustez dessas habilidades, especialmente em áreas como planejamento, aritmética básica e raciocínio abstrato [2]. É como se esses sistemas fossem estudantes brilhantes em algumas matérias, mas ainda tropeçassem em conceitos que consideramos fundamentais. Mesmo assim, o progresso tem sido impressionante. 
 
 ![alt text](image-3.png)
 
-Evolução do Claude Sonnet 3.7 e o Claude Sonnet 4 em relação aos comportamentos perigosos, mostrando que chegamos em um ponto que essa métrica é importante para nossa segurança, tamanha a capacidade e inteligência dos modelos. Leia aqui https://anthropic.com/model-card
+Evolução do Claude Sonnet 3.7 e o Claude Sonnet 4 em relação aos comportamentos perigosos, mostrando que chegamos a um ponto em que essa métrica é importante para nossa segurança, tamanha a capacidade e inteligência dos modelos. Leia aqui https://anthropic.com/model-card
 
-O que torna tudo isso ainda mais relevante para você é que essas tecnologias já estão sendo aplicadas em engenharia de software, incluindo sugestões de código, resumos automáticos e até mesmo reparo automático de programas [3]. Não é difícil imaginar como essas capacidades poderiam revolutionar ferramentas como o Revit, tornando-as não apenas mais poderosas, mas verdadeiramente colaborativas.
+![Comparação entre modelos de IA atuais e suas capacidades](Evolution.jpg)
+*A evolução acelerada dos modelos de IA demonstra um crescimento exponencial em capacidades, desde processamento básico de texto até raciocínio complexo e multimodalidade. Esta progressão ilustra como rapidamente estamos transitioning de ferramentas auxiliares para verdadeiros parceiros cognitivos.*
+
+O que torna tudo isso ainda mais relevante para você é que essas tecnologias já estão sendo aplicadas em engenharia de software, incluindo sugestões de código, resumos automáticos e até mesmo reparo automático de programas [3]. Não é difícil imaginar como essas capacidades poderiam revolucionar ferramentas como o Revit, tornando-as não apenas mais poderosas, mas verdadeiramente colaborativas.
 
 A base de toda essa revolução está nos chamados Grandes Modelos de Linguagem – ou LLMs, como são conhecidos. Esses sistemas representam um salto qualitativo na forma como as máquinas processam e geram linguagem natural [4]. Eles são treinados em vastas quantidades de texto – livros, artigos, sites, documentação técnica – e desenvolvem uma compreensão impressionante não apenas das palavras, mas dos conceitos por trás delas.
 
 ![alt text](image-2.png)
-*Sites como o libgen, que quebraram a chave de livros digitais, foram utilizados para treinar os primeiros modelos*
+*Sites como o LibGen, que quebraram a chave de livros digitais, foram utilizados para treinar os primeiros modelos*
 
-Como mencionamos, a mudança mesmo de direção foi o acesso a esse treinamento com linguagem natural. Mesmo que você treine um modelo com milhares de livros, acessar essa informação iria querer uma certa carga de códigos e uma espertize no assunto. Porém a partir do momento que você pode conversar com esse banco dados, qualquer usuário acessa. 
+Como mencionamos, a mudança mesmo de direção foi o acesso a esse treinamento com linguagem natural. Mesmo que você treine um modelo com milhares de livros, acessar essa informação iria requerer uma certa carga de códigos e uma expertise no assunto. Porém, a partir do momento que você pode conversar com esse banco de dados, qualquer usuário acessa. 
 
-É mais ou menos se você pudesse conversar com o Revit em linguagem natural, explicando suas intenções de projeto, e ele não apenas entendesse, mas oferecesse sugestões inteligentes baseadas em milhares de projetos similares que "estudou" anteriormente. Ou se pudesse pedir para ele gerar automaticamente detalhes construtivos baseados em normas técnicas atualizadas, adaptados às especificidades do seu projeto. Essas possibilidades não são mais fantasias distantes.
+É mais ou menos como se você pudesse conversar com o Revit em linguagem natural, explicando suas intenções de projeto, e ele não apenas entendesse, mas oferecesse sugestões inteligentes baseadas em milhares de projetos similares que "estudou" anteriormente. Ou se pudesse pedir para ele gerar automaticamente detalhes construtivos baseados em normas técnicas atualizadas, adaptados às especificidades do seu projeto. Essas possibilidades não são mais fantasias distantes.
 
 O mais interessante é que esses avanços não aconteceram da noite para o dia. Foram décadas de pesquisa em aprendizado de máquina, processamento de linguagem natural e arquiteturas computacionais sofisticadas que culminaram no momento atual [4]. É como se tivéssemos estado construindo as fundações de um edifício por muito tempo, e agora finalmente podemos ver a estrutura se erguer.
 
