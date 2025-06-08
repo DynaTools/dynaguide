@@ -2,9 +2,7 @@
 sidebar_position: 1
 ---
 
-# Tutorial: Revit Fractal Family - Universal Rotation System
-
-![Initial Concept](./img/image.png)
+# Family - Universal Rotation System 
 
 <div style={{textAlign: 'center', marginBottom: '2rem'}}>
 
