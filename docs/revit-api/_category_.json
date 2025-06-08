@@ -1,0 +1,10 @@
+{
+  "label": "Revit API",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "title": "Revit API",
+    "description": "Comprehensive guides and examples for Revit API development, including element collection, UI selection, and advanced filtering techniques.",
+    "slug": "/category/revit-api"
+  }
+}

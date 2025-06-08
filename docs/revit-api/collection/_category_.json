@@ -1,0 +1,10 @@
+{
+  "label": "Element Collection",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "title": "Element Collection with FilteredElementCollector",
+    "description": "Comprehensive guide to collecting and filtering elements in Revit using FilteredElementCollector. Learn various filtering techniques, element selection methods, and advanced collection strategies.",
+    "slug": "/category/revit-api/collection"
+  }
+}

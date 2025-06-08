@@ -1,0 +1,10 @@
+{
+  "label": "UI Selection",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "title": "User Interface Selection Methods",
+    "description": "Master the various selection methods in Revit API, including single and multiple element selection, face and edge selection, and advanced user interaction techniques.",
+    "slug": "/category/revit-api/ui-selection"
+  }
+}
