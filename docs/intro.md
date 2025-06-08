@@ -2,44 +2,48 @@
 sidebar_position: 1
 slug: /
 ---
-# Sumário
-# Livro Aberto - IA para projetistas
+# Summary
+# Open Book - AI for Designers
+by Paulo Giavoni 
 
-**Sua documentação técnica gratuira sobre Inteligência Artificial aplicada à Arquitetura, Engenharia e Construção. Aqui temos também alguns exemplos avançados de integração com o software Revit e Dynamo.**
+**Your free technical documentation on Artificial Intelligence applied to Architecture, Engineering, and Construction. Here you will also find some advanced examples of integration with Revit and Dynamo software.**
 
-Nosso grupo de Whatsapp Brasil https://chat.whatsapp.com/KzXHctuUqhA4p9OdH2pqk4
+Our Brazilian WhatsApp group: https://chat.whatsapp.com/KzXHctuUqhA4p9OdH2pqk4
 
 ![alt text](cover.png)
 
-## Sumário
+## Table of Contents
 
-### [Capítulo 1 - Fundamentos de IA](/category/fundamentos-de-ia)
-Conceitos essenciais e introdução aos modelos de linguagem
+### [AI Fundamentals](/category/fundamentos-de-ia)
+Essential concepts and introduction to language models
 
-### [Capítulo 2 - Engenharia de Prompt](/category/engenharia-de-prompt)
-Técnicas avançadas para comunicação com IA
+### [Prompt Engineering](/category/engenharia-de-prompt)
+Advanced techniques for communicating with AI
 
-### [Capítulo 3 - Ferramentas para IA](/category/ferramentas-para-aprendizagem-de-ia)
-Guias práticos e plataformas de desenvolvimento
+### [Tools for AI](/category/ferramentas-para-aprendizagem-de-ia)
+Practical guides and development platforms
 
-### [Capítulo 4 - Análise de Texto com IA](/category/analise-de-texto-com-ia)
-Processamento e interpretação inteligente de documentos
+### [Text Analysis with AI](/category/analise-de-texto-com-ia)
+Intelligent processing and interpretation of documents
 
-### [Capítulo 5 - Papers](/category/papers)
-Artigos acadêmicos e papers de referência sobre IA
+### [Lab - BIM Tools](/category/lab)
+Practical exercises with Revit and Dynamo
 
-### [Laboratório - Ferramentas BIM](/category/lab)
-Exercícios práticos com Revit e Dynamo
+### [Papers](/category/papers)
+Academic articles and reference papers on AI
 
----
 
-## 📧 Precisa de Ajuda?
-
-- **🐛 Problemas técnicos:** Abra uma [issue no GitHub](https://github.com/DynaTools/dynaguide/issues)
-- **📬 Contato direto:** [LinkedIn - Paulo Giavoni](https://it.linkedin.com/in/paulogiavoni)
 
 ---
 
-:::tip Dica Importante
-Este site é uma documentação viva! O conteúdo é atualizado constantemente com novas técnicas, ferramentas e exemplos práticos. Marque nos favoritos e volte sempre! ⭐
+## 📧 Need Help?
+
+- **🐛 Technical Issues:** Open an [issue on GitHub](https://github.com/DynaTools/dynaguide/issues)
+- **📬 Direct Contact:** [LinkedIn - Paulo Giavoni](https://it.linkedin.com/in/paulogiavoni)
+
+---
+
+:::tip Important Tip
+This site is a living document! The content is constantly updated with new techniques, tools, and practical examples. Bookmark it and come back often! ⭐
 :::
+```

@@ -2,75 +2,75 @@
 sidebar_position: 1
 ---
 
-# Introdução à Inteligência Artificial
+# Artificial Intelligence
 
-A Inteligência Artificial está aqui, funcionando silenciosamente em aplicativos que usamos todos os dias, desde o autocorretor do seu celular até os algoritmos que sugerem qual série assistir na Netflix. Mas o que realmente significa uma máquina ser "inteligente"? E como isso se conecta com seu trabalho diário de projetar e modelar edificações?
+Artificial Intelligence is here, working silently in applications we use every day, from your phone's autocorrect to the algorithms that suggest which series to watch on Netflix. But what does it really mean for a machine to be "intelligent"? And how does this connect with your daily work of designing and modeling buildings?
 
-Vamos começar do básico. Quando falamos de Inteligência Artificial, estamos nos referindo à capacidade de sistemas computacionais realizarem tarefas que, tradicionalmente, exigiriam inteligência humana. É como se déssemos aos computadores não apenas a habilidade de processar dados – coisa que eles sempre fizeram muito bem – mas também de compreender padrões, tomar decisões e até mesmo "aprender" com experiências passadas.
+Let's start with the basics. When we talk about Artificial Intelligence, we are referring to the ability of computer systems to perform tasks that would traditionally require human intelligence. It's as if we are giving computers not only the ability to process data—something they have always done very well—but also to understand patterns, make decisions, and even "learn" from past experiences.
 
-Pense comigo: quando você está detalhando uma escada no Revit, seu cérebro não está apenas calculando números. Você está considerando códigos de edificação, fluxo de pessoas, estética, viabilidade construtiva, integração com outros sistemas... É um processo incrivelmente complexo que envolve conhecimento técnico, experiência prática e até mesmo intuição. Durante décadas, acreditávamos que esse tipo de raciocínio multifacetado era exclusivamente humano.
+Consider this: when you are detailing a staircase in Revit, your brain isn't just calculating numbers. You are considering building codes, people flow, aesthetics, constructability, integration with other systems... It's an incredibly complex process that involves technical knowledge, practical experience, and even intuition. For decades, we believed that this type of multifaceted reasoning was exclusively human.
 
-![Ilustração mostrando pessoas usando o cérebro](image.png)
-Uma época de ouro, sem dúvidas, mas uma época em que a energia em produzir um desenho técnico era focada no processo de elaboração da informação e não na concepção dela. 
+![Illustration showing people using their brains](image.png)
+A golden age, no doubt, but one where the energy put into producing a technical drawing was focused on the process of creating the information, not on its conception.
 
 ![alt text](image-1.png)
-Um grande salto até os softwares atuais, muito menos repetição, é verdade. Porém a quantidade de dados envolvidos em um modelo BIM ainda é difícil de gerenciar! Iremos discutir mais adiante esses desafios...
+A great leap to current software, with much less repetition, it's true. However, the amount of data involved in a BIM model is still difficult to manage! We will discuss these challenges later...
 
-Voltando à história da IA, pesquisadores descobriram que, quando alimentamos computadores com quantidades massivas de dados e os treinamos usando técnicas sofisticadas, eles começam a desenvolver habilidades surpreendentes. Estudos recentes mostram que alguns sistemas de IA conseguem realizar tarefas que requerem o que chamamos de "Theory of Mind" – a capacidade de entender que outras pessoas têm pensamentos, crenças e intenções diferentes das nossas [1]. 
+Returning to the history of AI, researchers discovered that when we feed computers massive amounts of data and train them using sophisticated techniques, they begin to develop surprising abilities. Recent studies show that some AI systems can perform tasks that require what we call "Theory of Mind"—the ability to understand that other people have thoughts, beliefs, and intentions different from our own [1].
 
-:::info Theory of Mind e os Grandes Modelos de Linguagem
+:::info Theory of Mind and Large Language Models
 
-**O que é Theory of Mind?**
+**What is Theory of Mind?**
 
-Theory of Mind é uma habilidade cognitiva fundamental que permite aos seres humanos compreender que outras pessoas possuem estados mentais próprios – pensamentos, crenças, desejos e intenções – que podem ser diferentes dos nossos. Por exemplo, quando você projeta um edifício, você não apenas considera suas próprias preferências estéticas, mas também as necessidades dos futuros usuários, as expectativas do cliente e as limitações dos construtores.
+Theory of Mind is a fundamental cognitive ability that allows humans to understand that other people have their own mental states—thoughts, beliefs, desires, and intentions—that may differ from our own. For example, when you design a building, you not only consider your own aesthetic preferences but also the needs of future users, the client's expectations, and the builders' limitations.
 
-**Como isso se relaciona com os LLMs?**
+**How does this relate to LLMs?**
 
-O impressionante é que alguns Grandes Modelos de Linguagem (LLMs) começaram a demonstrar sinais dessa capacidade sem serem explicitamente programados para isso. Eles conseguem:
+What's impressive is that some Large Language Models (LLMs) have begun to show signs of this ability without being explicitly programmed for it. They can:
 
-- **Interpretar contextos sociais**: Entender quando alguém está sendo sarcástico ou quando precisa de uma explicação mais detalhada
-- **Adaptar a comunicação**: Modificar o tom e complexidade da resposta baseado no perfil do usuário
-- **Considerar perspectivas múltiplas**: Apresentar diferentes pontos de vista sobre um mesmo problema
+- **Interpret social contexts**: Understand when someone is being sarcastic or needs a more detailed explanation.
+- **Adapt communication**: Modify the tone and complexity of the response based on the user's profile.
+- **Consider multiple perspectives**: Present different points of view on the same problem.
 
-**Implicações para profissionais AEC**
+**Implications for AEC Professionals**
 
-Para arquitetos e engenheiros, isso significa que futuras ferramentas de IA poderão não apenas processar dados técnicos, mas também compreender as necessidades implícitas de um projeto, antecipando conflitos entre diferentes stakeholders e sugerindo soluções que considerem múltiplas perspectivas simultaneamente.
+For architects and engineers, this means that future AI tools may not only process technical data but also understand the implicit needs of a project, anticipating conflicts between different stakeholders and suggesting solutions that consider multiple perspectives simultaneously.
 
 :::
 
-Modelos como o antigo GPT-3.5 conseguiram completar cerca de 93% das tarefas que testam essa habilidade, um desempenho comparável ao de crianças de nove anos [1]. Isso sugere que essas máquinas não estão apenas executando comandos programados, mas desenvolvendo algo que se assemelha a uma compreensão rudimentar de como os humanos pensam.
+Models like the former GPT-3.5 managed to complete about 93% of the tasks that test this ability, a performance comparable to that of nine-year-old children [1]. This suggests that these machines are not just executing programmed commands, but developing something that resembles a rudimentary understanding of how humans think.
 
-Claro, precisamos manter os pés no chão. Estudos recentes questionam a robustez dessas habilidades, especialmente em áreas como planejamento, aritmética básica e raciocínio abstrato [2]. É como se esses sistemas fossem estudantes brilhantes em algumas matérias, mas ainda tropeçassem em conceitos que consideramos fundamentais. Mesmo assim, o progresso tem sido impressionante. 
+Of course, we need to keep our feet on the ground. Recent studies question the robustness of these abilities, especially in areas like planning, basic arithmetic, and abstract reasoning [2]. It's as if these systems are brilliant students in some subjects but still stumble on concepts we consider fundamental. Even so, the progress has been impressive.
 
 ![alt text](image-3.png)
 
-Evolução do Claude Sonnet 3.7 e o Claude Sonnet 4 em relação aos comportamentos perigosos, mostrando que chegamos a um ponto em que essa métrica é importante para nossa segurança, tamanha a capacidade e inteligência dos modelos. Leia aqui https://anthropic.com/model-card
+The evolution of models like Claude 3.5 Sonnet and Claude 3 Opus regarding harmful behaviors shows we've reached a point where this safety metric is crucial, given the models' immense capability and intelligence. Read more here: https://anthropic.com/model-card
 
-![Comparação entre modelos de IA atuais e suas capacidades](Evolution.jpg)
-*A evolução acelerada dos modelos de IA demonstra um crescimento exponencial em capacidades, desde processamento básico de texto até raciocínio complexo e multimodalidade. Esta progressão ilustra como rapidamente estamos transitioning de ferramentas auxiliares para verdadeiros parceiros cognitivos.*
+![Comparison between current AI models and their capabilities](Evolution.jpg)
+*The accelerated evolution of AI models demonstrates exponential growth in capabilities, from basic text processing to complex reasoning and multimodality. This progression illustrates how quickly we are transitioning from auxiliary tools to true cognitive partners.*
 
-O que torna tudo isso ainda mais relevante para você é que essas tecnologias já estão sendo aplicadas em engenharia de software, incluindo sugestões de código, resumos automáticos e até mesmo reparo automático de programas [3]. Não é difícil imaginar como essas capacidades poderiam revolucionar ferramentas como o Revit, tornando-as não apenas mais poderosas, mas verdadeiramente colaborativas.
+What makes all this even more relevant to you is that these technologies are already being applied in software engineering, including code suggestions, automatic summaries, and even automatic program repair [3]. It's not hard to imagine how these capabilities could revolutionize tools like Revit, making them not just more powerful, but truly collaborative.
 
-A base de toda essa revolução está nos chamados Grandes Modelos de Linguagem – ou LLMs, como são conhecidos. Esses sistemas representam um salto qualitativo na forma como as máquinas processam e geram linguagem natural [4]. Eles são treinados em vastas quantidades de texto – livros, artigos, sites, documentação técnica – e desenvolvem uma compreensão impressionante não apenas das palavras, mas dos conceitos por trás delas.
+The foundation of this entire revolution lies in what are known as Large Language Models—or LLMs, as they are commonly called. These systems represent a qualitative leap in how machines process and generate natural language [4]. They are trained on vast amounts of text—books, articles, websites, technical documentation—and develop an impressive understanding not just of the words, but of the concepts behind them.
 
 ![alt text](image-2.png)
-*Sites como o LibGen, que quebraram a chave de livros digitais, foram utilizados para treinar os primeiros modelos*
+*Sites like LibGen, which unlocked vast digital libraries, were used to train the early models.*
 
-Como mencionamos, a mudança mesmo de direção foi o acesso a esse treinamento com linguagem natural. Mesmo que você treine um modelo com milhares de livros, acessar essa informação iria requerer uma certa carga de códigos e uma expertise no assunto. Porém, a partir do momento que você pode conversar com esse banco de dados, qualquer usuário acessa. 
+As we mentioned, the real directional shift was the ability to access this training through natural language. Even if you train a model with thousands of books, accessing that information would require a certain amount of code and expertise in the subject. However, from the moment you can converse with this database, any user can access it.
 
-É mais ou menos como se você pudesse conversar com o Revit em linguagem natural, explicando suas intenções de projeto, e ele não apenas entendesse, mas oferecesse sugestões inteligentes baseadas em milhares de projetos similares que "estudou" anteriormente. Ou se pudesse pedir para ele gerar automaticamente detalhes construtivos baseados em normas técnicas atualizadas, adaptados às especificidades do seu projeto. Essas possibilidades não são mais fantasias distantes.
+It's as if you could talk to Revit in natural language, explaining your design intentions, and it would not only understand but also offer intelligent suggestions based on thousands of similar projects it has "studied" previously. Or if you could ask it to automatically generate construction details based on updated technical standards, adapted to the specifics of your project. These possibilities are no longer distant fantasies.
 
-O mais interessante é que esses avanços não aconteceram da noite para o dia. Foram décadas de pesquisa em aprendizado de máquina, processamento de linguagem natural e arquiteturas computacionais sofisticadas que culminaram no momento atual [4]. É como se tivéssemos estado construindo as fundações de um edifício por muito tempo, e agora finalmente podemos ver a estrutura se erguer.
+What's most interesting is that these advances didn't happen overnight. They are the culmination of decades of research in machine learning, natural language processing, and sophisticated computational architectures [4]. It's as if we have been building the foundations of a building for a long time, and now we can finally see the structure rise.
 
-Pode parecer complicado no início, mas a beleza da IA moderna está justamente na sua capacidade de simplificar interfaces complexas. Você não precisa ser um programador para se beneficiar dessas tecnologias – elas estão sendo projetadas para serem intuitivas e acessíveis. É similar à evolução do próprio Revit: você não precisa entender os algoritmos matemáticos por trás da modelagem paramétrica para criar projetos extraordinários.
+It might seem complicated at first, but the beauty of modern AI lies precisely in its ability to simplify complex interfaces. You don't need to be a programmer to benefit from these technologies—they are being designed to be intuitive and accessible. It's similar to the evolution of Revit itself: you don't need to understand the mathematical algorithms behind parametric modeling to create extraordinary projects.
 
-Vamos parar um momento para absorver isso. Estamos testemunhando o nascimento de uma nova era na qual as ferramentas não apenas executam nossas instruções, mas começam a compreender nossas intenções e contextos. Para profissionais como você, que lidam diariamente com a complexidade de traduzir ideias arquitetônicas em realidade construída, essas tecnologias representam uma oportunidade única de amplificar sua criatividade e eficiência.
+Let's pause for a moment to absorb this. We are witnessing the birth of a new era in which tools not only execute our instructions but begin to understand our intentions and contexts. For professionals like you, who deal daily with the complexity of translating architectural ideas into built reality, these technologies represent a unique opportunity to amplify your creativity and efficiency.
 
-A jornada que começamos aqui nos levará a explorar como esses Grandes Modelos de Linguagem funcionam, como eles "aprendem" e, mais importante, como eles podem transformar fundamentalmente a forma como você projeta, colabora e inova. Porque, no final das contas, a melhor tecnologia é aquela que nos permite ser mais humanos – mais criativos, mais colaborativos, mais capazes de transformar visões em realidade.
+The journey we begin here will lead us to explore how these Large Language Models work, how they "learn," and, more importantly, how they can fundamentally transform the way you design, collaborate, and innovate. Because, at the end of the day, the best technology is that which allows us to be more human—more creative, more collaborative, more capable of turning visions into reality.
 
-É isso que a Inteligência Artificial promete: não substituir nossa expertise, mas potencializá-la de maneiras que ainda estamos começando a imaginar.
+This is what Artificial Intelligence promises: not to replace our expertise, but to enhance it in ways we are just beginning to imagine.
 
-## Referências Citadas Nesta Seção
+## References Cited in This Section
 
 [1] Kosinski, M. (2023). Theory of Mind May Have Spontaneously Emerged in Large Language Models. CoRR abs/2302.02083.
 

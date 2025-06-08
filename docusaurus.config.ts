@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'DynaGuide',
-  tagline: 'Documentação técnica dinâmica e interativa',
+  tagline: 'Dynamic and interactive technical documentation',
   favicon: 'img/favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -32,18 +32,13 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'pt-BR',
-    locales: ['pt-BR'],
+    defaultLocale: 'en',
+    locales: ['en'],
     localeConfigs: {
-      'pt-BR': {
-        label: 'Português',
+      'en': {
+        label: 'English',
         direction: 'ltr',
-        htmlLang: 'pt-BR',
-      },
-      'it': {
-        label: 'Italiano',
-        direction: 'ltr',
-        htmlLang: 'it',
+        htmlLang: 'en',
       },
     },
   },
@@ -69,10 +64,6 @@ const config: Config = {
     ],
   ],
 
-  plugins: [
-    './plugins/auto-locale-detection.js',
-  ],
-
   themeConfig: {
     // Replace with your project's social card
     image: 'img/cover.png',
@@ -87,21 +78,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Visão Geral',
-        },
-        {
-          type: 'localeDropdown',
-          position: 'right',
-          dropdownItemsAfter: [
-            {
-              type: 'html',
-              value: '<hr style="margin: 0.3rem 0;">',
-            },
-            {
-              href: 'https://github.com/DynaTools/dynaguide/issues',
-              label: 'Ajudar na tradução',
-            },
-          ],
+          label: 'Overview',
         },
         {
           href: 'https://github.com/DynaTools/dynaguide',
@@ -114,24 +91,24 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Documentação',
+          title: 'Documentation',
           items: [
             {
-              label: 'Visão Geral',
+              label: 'Overview',
               to: '/',
             },
             {
-              label: 'Fundamentos de IA',
-              to: '/category/fundamentos-de-ia',
+              label: 'AI Fundamentals',
+              to: '/category/ai-fundamentals',
             },
             {
               label: 'Prompts',
-              to: '/category/engenharia-de-prompt',
+              to: '/category/prompt-engineering',
             },
           ],
         },
         {
-          title: 'Comunidade',
+          title: 'Community',
           items: [
             {
               label: 'LinkedIn',
@@ -144,7 +121,7 @@ const config: Config = {
           ],
         },
         {
-          title: 'Mais',
+          title: 'More',
           items: [
             {
               label: 'GitHub',

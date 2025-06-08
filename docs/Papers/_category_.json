@@ -3,8 +3,8 @@
   "position": 7,
   "link": {
     "type": "generated-index",
-    "title": "Artigos para Leitura",
-    "description": "Artigos mais recentes para download ou leitura direta online.",
+    "title": "Reading Articles",
+    "description": "Latest articles for download or direct online reading.",
     "slug": "/category/papers"
   }
 }

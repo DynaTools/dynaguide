@@ -2,41 +2,41 @@
 sidebar_position: 2
 ---
 
-# Scripts Dinâmicos no Dynamo para Revit
+# Dynamic Scripts in Dynamo for Revit
 
 ![Dynamo Script](./img/Dynamo_time/script.png)
 
 <div style={{textAlign: 'center', marginBottom: '2rem'}}>
 
-![Animação Dynamo](./img/Dynamo_time/Dynanomic.gif)
+![Dynamo Animation](./img/Dynamo_time/Dynanomic.gif)
 
 </div>
 
-## Visão Geral do Script
+## Script Overview
 
-:::info Conceito
-Este tutorial explora como criar scripts dinâmicos no Dynamo que utilizam data e hora atuais para automatizar parâmetros de elementos no Revit, demonstrando aplicações práticas de automação temporal.
+:::info Concept
+This tutorial explores how to create dynamic scripts in Dynamo that use the current date and time to automate element parameters in Revit, demonstrating practical applications of time-based automation.
 :::
 
-O script utiliza os seguintes componentes principais:
+The script uses the following main components:
 
-1. **Data e Hora Atual**: Utilizamos o nó `DateTime.Now` para obter a data e hora atuais, fornecendo um contexto temporal à operação.
-2. **Scripts Python**: Dois scripts Python são empregados para realizar cálculos personalizados.
-3. **Iterações e Ângulos**: Um bloco de código calcula o ângulo baseado em iterações, gerando uma sequência de valores.
-4. **Seleção de Elemento**: O nó `Select Model Element` permite escolher o elemento específico que terá seus parâmetros alterados.
-5. **Definição de Parâmetros**: Finalmente, o nó `Element.SetParameterByName` atualiza o parâmetro do elemento selecionado com o valor calculado.
+1.  **Current Date and Time**: We use the `DateTime.Now` node to get the current date and time, providing a temporal context to the operation.
+2.  **Python Scripts**: Two Python scripts are used to perform custom calculations.
+3.  **Iterations and Angles**: A code block calculates the angle based on iterations, generating a sequence of values.
+4.  **Element Selection**: The `Select Model Element` node allows you to choose the specific element whose parameters will be changed.
+5.  **Parameter Setting**: Finally, the `Element.SetParameterByName` node updates the parameter of the selected element with the calculated value.
 
-## Aplicações Práticas
+## Practical Applications
 
-:::tip Casos de Uso
-- Ajuste automático de parâmetros de iluminação baseado na hora do dia
-- Atualização de ângulos ou posições em elementos estruturais para simulações
-- Qualquer cenário onde a automação pode reduzir erros manuais e aumentar a eficiência
+:::tip Use Cases
+- Automatic adjustment of lighting parameters based on the time of day.
+- Updating angles or positions in structural elements for simulations.
+- Any scenario where automation can reduce manual errors and increase efficiency.
 :::
 
-## Código e Lógica
+## Code and Logic
 
-### Script Python 1 - Processamento de Tempo
+### Python Script 1 - Time Processing
 
 ```python
 import clr
@@ -45,27 +45,27 @@ from Autodesk.DesignScript.Geometry import *
 
 import datetime
 
-# Coleta a hora atual
-hora_atual = IN[0]  # Entrada do nó "DateTime.Now"
-multiplicador_divisor = IN[1]  # Entrada do valor de multiplicação/divisão (Slider)
+# Collect the current time
+hora_atual = IN[0]  # Input from the "DateTime.Now" node
+multiplicador_divisor = IN[1]  # Input for the multiplication/division value (Slider)
 
-# Extrair o valor dos segundos atuais
+# Extract the current seconds value
 segundos = hora_atual.Second
 
-# Função para multiplicar e dividir os segundos
+# Function to multiply and divide the seconds
 def processar_segundos(segundos, valor):
     multiplicado = segundos * valor
-    dividido = segundos / valor if valor != 0 else None  # Evitar divisão por zero
+    dividido = segundos / valor if valor != 0 else None  # Avoid division by zero
     return multiplicado, dividido
 
-# Processa os segundos
+# Process the seconds
 resultado_multiplicado, resultado_dividido = processar_segundos(segundos, multiplicador_divisor)
 
 # Assign your output to the OUT variable
 OUT = resultado_multiplicado
 ```
 
-### Script Python 2 - Ajuste de Valores
+### Python Script 2 - Value Adjustment
 
 ```python
 # Load the Python Standard and DesignScript Libraries
@@ -79,7 +79,7 @@ valores_originais = IN[0]
 
 # Place your code below this line
 def ajustar_valores(valores):
-    # Verifica se a entrada é uma lista, se não for, converte para uma lista
+    # Checks if the input is a list; if not, converts it to a list
     if not isinstance(valores, list):
         valores = [valores]
         
@@ -91,20 +91,21 @@ def ajustar_valores(valores):
             valores_ajustados.append(valor)
     return valores_ajustados
 
-# Exemplo de uso:
+# Example of use:
 valores_ajustados = ajustar_valores(valores_originais)
 
 # Assign your output to the OUT variable.
 OUT = valores_ajustados
 ```
 
-## Fluxo de Trabalho
+## Workflow
 
-:::note Processo
-1. **Captura Temporal**: O script captura a hora atual usando `DateTime.Now`
-2. **Processamento**: Os segundos são extraídos e processados através de operações matemáticas
-3. **Ajuste de Valores**: Os valores são limitados a um máximo de 90 graus
-4. **Aplicação**: O valor final é aplicado ao parâmetro do elemento selecionado no Revit
+:::note Process
+1.  **Time Capture**: The script captures the current time using `DateTime.Now`.
+2.  **Processing**: The seconds are extracted and processed through mathematical operations.
+3.  **Value Adjustment**: The values are limited to a maximum of 90 degrees.
+4.  **Application**: The final value is applied to the parameter of the selected element in Revit.
 :::
 
-Este exemplo demonstra como o Dynamo pode ser usado para criar automações baseadas em tempo, abrindo possibilidades para simulações mais realistas e dinâmicas no Revit.
+This example demonstrates how Dynamo can be used to create time-based automations, opening up possibilities for more realistic and dynamic simulations in Revit.
+```

@@ -1,126 +1,128 @@
 ---
 id: huggingface-colab-tutorial
-title: 'Executar Modelos Hugging Face no Google Colab'
+title: 'Run Hugging Face Models in Google Colab'
 sidebar_label: 'Hugging Face + Colab'
 sidebar_position: 6
 slug: /huggingface-colab
-description: Tutorial passo a passo para abrir modelos da Hugging Face em um notebook Google Colab com um clique.
+description: Step-by-step tutorial to open Hugging Face models in a Google Colab notebook with a single click.
 keywords:
   - hugging face
   - google colab
-  - IA
+  - AI
   - notebook
   - Colab
 ---
 
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-## Visão Geral
+## Overview
 
-O Google Colab e a Hugging Face **adicionaram um botão “Open&nbsp;in&nbsp;Colab” em todas as _model cards_** do Hub.  
-Com um clique, você gera um notebook pré‑configurado para **carregar, testar e até _fine‑tunear_** qualquer modelo — dispensando _boilerplate_ e acelerando experimentos. ([medium.com](https://medium.com/google-colab/launch-hugging-face-models-in-colab-for-faster-ai-exploration-bee261978cf9))
+Google Colab and Hugging Face **have added an “Open&nbsp;in&nbsp;Colab” button to all _model cards_** on the Hub.
+With a single click, you can generate a pre-configured notebook to **load, test, and even _fine-tune_** any model—skipping boilerplate and accelerating experiments. ([medium.com](https://medium.com/google-colab/launch-hugging-face-models-in-colab-for-faster-ai-exploration-bee261978cf9))
 
-## Pré‑requisitos
+## Prerequisites
 
-- Conta Google para acessar o **[Colab](https://colab.research.google.com)**
-- Conta Hugging Face (opcional, mas recomendada para salvar _tokens_ e modelos privados)
-- Navegador atualizado
+- Google account to access **[Colab](https://colab.research.google.com)**
+- Hugging Face account (optional, but recommended for saving _tokens_ and private models)
+- An up-to-date browser
 
-:::tip BOM SABER
-Caso você seja autor de modelos, basta incluir um arquivo `notebook.ipynb` na raiz do repositório para que ele seja usado em vez do notebook gerado automaticamente. ([medium.com](https://medium.com/google-colab/launch-hugging-face-models-in-colab-for-faster-ai-exploration-bee261978cf9))
+:::tip GOOD TO KNOW
+If you are a model author, simply include a `notebook.ipynb` file in the root of the repository, and it will be used instead of the automatically generated notebook. ([medium.com](https://medium.com/google-colab/launch-hugging-face-models-in-colab-for-faster-ai-exploration-bee261978cf9))
 :::
 
-## Passo a Passo
+## Step-by-Step
 
-### 1. Escolha o modelo
+### 1. Choose the model
 
-Acesse qualquer _model card_ no Hub, por exemplo:
+Go to any _model card_ on the Hub, for example:
 
 ```
 https://huggingface.co/google/gemma-3-27b-it
 ```
 
-### 2. Abra no Colab
+### 2. Open in Colab
 
-Clique em **Use this model → Open in Colab**  
-ou simplesmente acrescente `/colab` ao final do URL:
+Click on **Use this model → Open in Colab**
+or simply add `/colab` to the end of the URL:
 
 ```
 https://huggingface.co/google/gemma-3-27b-it/colab
 ```
 
-### 3. Configure o ambiente
+### 3. Configure the environment
 
-No notebook gerado, vá em **Runtime ▸ Change runtime type** e selecione **GPU** (ou **TPU** se disponível).
+In the generated notebook, go to **Runtime ▸ Change runtime type** and select **GPU** (or **TPU** if available).
 
-> GPUs gratuitas no Colab são suficientes para *inference* na maioria dos modelos baseados em Transformers.
+> Free GPUs in Colab are sufficient for *inference* on most Transformer-based models.
 
-### 4. Execute as células
+### 4. Execute the cells
 
-A primeira célula geralmente instala dependências:
+The first cell usually installs dependencies:
 
 ```python
 !pip install -q transformers accelerate
 ```
 
-Em seguida, experimente o modelo:
+Next, try out the model:
 
 ```python
 from transformers import pipeline
 pipe = pipeline("text-generation", model="google/gemma-3-27b-it")
-print(pipe("Olá, tudo bem?")[0]['generated_text'])
+print(pipe("Hello, how are you?")[0]['generated_text'])
 ```
 
-### 5. Personalize
+### 5. Customize
 
-- **Substitua o `model=`** por outro ID da Hugging Face
-- Ajuste parâmetros como `max_new_tokens`, `temperature`, `top_p`
-- Faça _fine‑tuning_ adicionando sua própria etapa de treinamento
+- **Replace `model=`** with another Hugging Face model ID
+- Adjust parameters like `max_new_tokens`, `temperature`, `top_p`
+- Perform _fine-tuning_ by adding your own training step
 
 <Tabs>
 <TabItem value="CLI" label="Via CLI">
-  
+
 ```bash
 pip install huggingface_hub
 export MODEL_ID=google/gemma-3-27b-it
 python - <<'PY'
 from huggingface_hub import InferenceClient
 client = InferenceClient(model="$MODEL_ID")
-print(client.text_generation("Olá, mundo!"))
+print(client.text_generation("Hello, world!"))
 PY
 ```
 
 </TabItem>
 <TabItem value="Python" label="Python">
-  
+
 ```python
 from huggingface_hub import InferenceClient
 client = InferenceClient(model="google/gemma-3-27b-it")
-client.text_generation("Olá, mundo!")
+client.text_generation("Hello, world!")
 ```
 
 </TabItem>
 </Tabs>
 
-## Para Autores de Modelos
+## For Model Authors
 
-1. Crie ou suba `notebook.ipynb` demonstrando uso avançado do seu modelo.  
-2. _Commit_ no mesmo repositório; o Hub prioriza esse arquivo sobre o gerado.  
-3. O botão “Open in Colab” apontará para seu notebook personalizado.
+1. Create or upload a `notebook.ipynb` file demonstrating advanced usage of your model.
+2. _Commit_ it to the same repository; the Hub will prioritize this file over the auto-generated one.
+3. The “Open&nbsp;in&nbsp;Colab” button will now point to your custom notebook.
 
-## Próximos Passos
+## Next Steps
 
-- Explore o **[Hugging Face Spaces](https://huggingface.co/spaces)** para demos interativas
-- Integre Colab com **[Kaggle Datasets](https://www.kaggle.com/datasets)** para dados grandes
-- Leia o anúncio oficial no Medium para entender a motivação completa. ([medium.com](https://medium.com/google-colab/launch-hugging-face-models-in-colab-for-faster-ai-exploration-bee261978cf9))
+- Explore **[Hugging Face Spaces](https://huggingface.co/spaces)** for interactive demos
+- Integrate Colab with **[Kaggle Datasets](https://www.kaggle.com/datasets)** for large datasets
+- Read the official announcement on Medium to understand the full motivation. ([medium.com](https://medium.com/google-colab/launch-hugging-face-models-in-colab-for-faster-ai-exploration-bee261978cf9))
 
-## Recursos
+## Resources
 
-- [Anúncio no Medium](https://medium.com/google-colab/launch-hugging-face-models-in-colab-for-faster-ai-exploration-bee261978cf9)
-- [Documentação Hugging Face Hub](https://huggingface.co/docs/huggingface_hub)
-- [Transformers Quick Start](https://huggingface.co/docs/transformers/quickstart)
+- [Medium Announcement](https://medium.com/google-colab/launch-hugging-face-models-in-colab-for-faster-ai-exploration-bee261978cf9)
+- [Hugging Face Hub Documentation](https://huggingface.co/docs/huggingface_hub)
+- [Transformers Quick Start](https://huggingface.co/docs/transformers/quickstart)
 - [Colab FAQ](https://research.google.com/colaboratory/faq.html)
 
 ---
-*Tutorial criado em 08 de junho de 2025 a partir do artigo do Google Colab*.
+*Tutorial created on June 8, 2025, based on the Google Colab article*.
+```

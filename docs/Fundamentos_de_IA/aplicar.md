@@ -2,61 +2,61 @@
 sidebar_position: 3
 ---
 
-# Aplicações Principais
+# Key Applications
 
-Vamos dar uma olhada em como isso está acontecendo no mundo real, porque entender essas aplicações vai te ajudar a visualizar o potencial que existe no nosso próprio campo.
+Let's take a look at how this is happening in the real world, because understanding these applications will help you visualize the potential that exists in our own field.
 
-## Transformando a Medicina
+## Transforming Medicine
 
-Começando pela área da saúde – e aqui tem uma conexão interessante com o que fazemos. Você já reparou como um bom projeto arquitetônico precisa de análise detalhada de plantas, cortes e detalhes? Os médicos enfrentam algo parecido ao analisar exames de imagem. A diferença é que, em vez de identificar problemas estruturais em um edifício, eles procuram anomalias no corpo humano.
+Starting with healthcare—and here there's an interesting connection to what we do. Have you ever noticed how a good architectural project requires a detailed analysis of plans, sections, and details? Doctors face something similar when analyzing medical images. The difference is that instead of identifying structural problems in a building, they are looking for anomalies in the human body.
 
-Os LLMs estão sendo integrados com tecnologias de imagem médica para ajudar radiologistas a interpretar exames com mais precisão [15]. É fascinante: esses sistemas conseguem analisar relatórios clínicos escritos em linguagem natural e correlacionar com dados visuais, criando insights que aumentam a precisão dos diagnósticos [16].
+LLMs are being integrated with medical imaging technologies to help radiologists interpret scans with greater accuracy [15]. It's fascinating: these systems can analyze clinical reports written in natural language and correlate them with visual data, creating insights that increase diagnostic accuracy [16].
 
-Mas vai além disso. Imagine ter um assistente que lê toda a literatura médica disponível e te ajuda a tomar decisões clínicas baseadas em evidências. Sistemas como o BERT e suas variações foram especificamente treinados em textos médicos, criando ferramentas que conseguem interpretar anotações clínicas, entender resultados de exames e fornecer recomendações fundamentadas [17]. É como ter acesso instantâneo ao conhecimento médico mundial.
+But it goes beyond that. Imagine having an assistant that reads all available medical literature and helps you make evidence-based clinical decisions. Systems like BERT and its variations have been specifically trained on medical texts, creating tools that can interpret clinical notes, understand test results, and provide well-founded recommendations [17]. It's like having instant access to the world's medical knowledge.
 
-Uma aplicação que me impressiona particularmente é a automatização da documentação médica. Médicos passam horas preenchendo prontuários eletrônicos – tempo que poderiam estar dedicando aos pacientes. Os LLMs conseguem transformar conversas naturais entre médico e paciente em registros estruturados e codificar procedimentos médicos automaticamente [18].
+One application that particularly impresses me is the automation of medical documentation. Doctors spend hours filling out electronic health records—time they could be dedicating to patients. LLMs can transform natural conversations between a doctor and patient into structured records and automatically encode medical procedures [18].
 
-O Med-PaLM, desenvolvido pelo Google, representa o estado da arte nessa área. Usando estratégias avançadas de prompting – que são basicamente formas inteligentes de "conversar" com a IA – este modelo alcançou resultados impressionantes em benchmarks médicos, chegando a 67,6% de acerto no MedQA, um exame equivalente ao teste de licenciamento médico americano [19].
+Med-PaLM, developed by Google, represents the state of the art in this area. Using advanced prompting strategies—which are basically smart ways of "talking" to the AI—this model has achieved impressive results on medical benchmarks, reaching 67.6% accuracy on MedQA, an exam equivalent to the US Medical Licensing Examination [19].
 
-## Revolucionando as Finanças
+## Revolutionizing Finance
 
-No mundo financeiro, a coisa fica ainda mais interessante. Pense nas finanças como um setor que lida com uma quantidade absurda de documentos, dados e análises – não muito diferente de como lidamos com especificações técnicas, normas e regulamentações na construção.
+In the financial world, things get even more interesting. Think of finance as a sector that deals with an absurd amount of documents, data, and analysis—not unlike how we handle technical specifications, standards, and regulations in construction.
 
-Os algoritmos de trading agora usam LLMs para analisar notícias, relatórios financeiros e até posts em redes sociais para prever movimentos do mercado [20]. É como se fosse um super-analista que consegue processar milhares de fontes de informação simultaneamente e identificar padrões que influenciam os preços das ações.
+Trading algorithms now use LLMs to analyze news, financial reports, and even social media posts to predict market movements [20]. It's like having a super-analyst who can process thousands of sources of information simultaneously and identify patterns that influence stock prices.
 
-Para gestão de riscos, esses sistemas interpretam documentos regulamentares complexos e identificam potenciais problemas de compliance [21]. Imagina só: um assistente que lê todas as mudanças nas regulamentações financeiras e te avisa sobre o que pode afetar sua empresa.
+For risk management, these systems interpret complex regulatory documents and identify potential compliance issues [21]. Just imagine: an assistant that reads all the changes in financial regulations and alerts you to what might affect your company.
 
-O BloombergGPT é um exemplo fascinante dessa especialização. Treinado especificamente com 363 bilhões de tokens de dados financeiros, este modelo consegue entender o jargão do mercado financeiro de forma nativa [22]. Quando testado contra outros modelos em tarefas financeiras, ele superou consistentemente a concorrência, mostrando como a especialização faz diferença.
+BloombergGPT is a fascinating example of this specialization. Trained specifically with 363 billion tokens of financial data, this model can natively understand the jargon of the financial market [22]. When tested against other models on financial tasks, it consistently outperformed the competition, showing how much specialization matters.
 
-## Transformando a Educação
+## Transforming Education
 
-Na educação, os LLMs estão criando experiências de aprendizado personalizadas de uma forma que nunca vimos antes. É como ter um tutor particular disponível 24 horas por dia, que se adapta ao seu ritmo e estilo de aprendizado.
+In education, LLMs are creating personalized learning experiences in a way we've never seen before. It's like having a private tutor available 24/7 who adapts to your pace and learning style.
 
-Esses sistemas conseguem avaliar redações e trabalhos acadêmicos, fornecendo feedback detalhado sobre pontos fortes e áreas que precisam de melhoria [23]. Mais impressionante ainda: conseguem detectar plágio e até mesmo criar exercícios personalizados baseados no nível de conhecimento do estudante.
+These systems can evaluate essays and academic papers, providing detailed feedback on strengths and areas for improvement [23]. Even more impressively, they can detect plagiarism and even create personalized exercises based on a student's knowledge level.
 
-Para nós, que frequentemente precisamos nos manter atualizados com novas tecnologias e normas, imagine ter um assistente que consegue explicar conceitos complexos de forma simples, responder dúvidas específicas e até mesmo simular situações de projeto para praticar [24].
+For us, who frequently need to stay updated with new technologies and standards, imagine having an assistant that can explain complex concepts simply, answer specific questions, and even simulate project scenarios for practice [24].
 
-## Apoiando o Sistema Jurídico
+## Supporting the Legal System
 
-No direito, área tradicionalmente conservadora, os LLMs estão provando seu valor em tarefas que exigem análise minuciosa de documentos – algo que tem muito em comum com a análise de contratos e especificações que fazemos em projetos.
+In law, a traditionally conservative field, LLMs are proving their worth in tasks that require meticulous document analysis—something that has much in common with the analysis of contracts and specifications we perform in projects.
 
-Sistemas como o GPT-3 estão sendo testados em raciocínio estatutário, uma habilidade fundamental na prática jurídica. Embora ainda tenham limitações, já conseguem interpretar leis e aplicá-las a situações específicas com precisão crescente [25]. O GPT-4 chegou a alcançar pontuação no top 10% em simulações do exame da ordem dos advogados [26].
+Systems like GPT-3 are being tested on statutory reasoning, a fundamental skill in legal practice. Although they still have limitations, they can already interpret laws and apply them to specific situations with increasing accuracy [25]. GPT-4 even achieved a score in the top 10% on simulations of the bar exam [26].
 
-## Acelerando a Pesquisa Científica
+## Accelerating Scientific Research
 
-Talvez uma das aplicações mais empolgantes seja na pesquisa científica. LLMs podem auxiliar em todas as etapas do processo de pesquisa: desde a revisão de literatura até a geração de hipóteses, análise de dados e até mesmo redação de artigos [27].
+Perhaps one of the most exciting applications is in scientific research. LLMs can assist in all stages of the research process: from literature review to hypothesis generation, data analysis, and even writing articles [27].
 
-Imagine ter um assistente que consegue ler milhares de papers científicos e extrair insights relevantes para sua pesquisa em questão de minutos. Ou que pode gerar hipóteses inovadoras combinando conhecimentos de diferentes áreas [28]. É como ter acesso a um laboratório de ideias infinito.
+Imagine having an assistant that can read thousands of scientific papers and extract relevant insights for your research in a matter of minutes. Or one that can generate innovative hypotheses by combining knowledge from different fields [28]. It's like having access to an infinite idea laboratory.
 
-## Conectando os Pontos
+## Connecting the Dots
 
-Vamos parar um momento para absorver isso. O que todas essas aplicações têm em comum? Elas lidam com linguagem natural – a forma como nós, humanos, nos comunicamos naturalmente. E aqui está o ponto crucial: para que esses sistemas façam seu trabalho, alguém precisa saber como se comunicar com eles de forma eficaz.
+Let's pause for a moment to absorb this. What do all these applications have in common? They deal with natural language—the way we humans naturally communicate. And here's the crucial point: for these systems to do their job, someone needs to know how to communicate with them effectively.
 
-É aqui que entra uma habilidade que está se tornando fundamental: saber criar prompts eficazes. Porque, no fim das contas, a diferença entre um resultado medíocre e um resultado extraordinário muitas vezes está na forma como você formula sua pergunta ou instrução para a IA.
+This is where a skill that is becoming fundamental comes into play: knowing how to create effective prompts. Because, in the end, the difference between a mediocre result and an extraordinary one often lies in how you formulate your question or instruction to the AI.
 
-Isso me leva ao próximo passo da nossa jornada: entender exatamente o que são esses prompts e como eles funcionam como a ponte entre suas ideias e o poder dos LLMs.
+This leads me to the next step of our journey: understanding exactly what these prompts are and how they function as the bridge between your ideas and the power of LLMs.
 
-## Referências Citadas Nesta Seção
+## References Cited in This Section
 
 [15] Zhi Li, Qiang Zhang, Qi Dou, et al. "A survey on deep learning in medical image analysis". In: Medical image analysis 67 (2021), p. 101813.
 

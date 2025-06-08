@@ -2,265 +2,265 @@
 sidebar_position: 1
 ---
 
-# Tutorial: Família Revit Fractal - Sistema de Rotação Universal
+# Tutorial: Revit Fractal Family - Universal Rotation System
 
-![Conceito Inicial](./img/image.png)
+![Initial Concept](./img/image.png)
 
 <div style={{textAlign: 'center', marginBottom: '2rem'}}>
 
-![Sistema de Rotação Universal](./img/OrbitFamily-ezgif.com-video-to-gif-converter.gif)
+![Universal Rotation System](./img/OrbitFamily-ezgif.com-video-to-gif-converter.gif)
 
 </div>
 
-## Conceito
+## Concept
 
-:::info Inspiração
-O conceito de criar uma família giratória em qualquer ângulo parecia impossível até descobrir uma técnica avançada de famílias adaptativas. Este tutorial simplifica o processo para criar uma família de painel fotovoltaico que pode rotacionar em qualquer ângulo.
+:::info Inspiration
+The concept of creating a rotating family at any angle seemed impossible until discovering an advanced adaptive family technique. This tutorial simplifies the process to create a photovoltaic panel family that can rotate at any angle.
 :::
 
-O princípio é similar ao de uma **morsa fractal**, onde cada peça giratória está conectada à outra, permitindo movimento em múltiplos eixos:
+The principle is similar to a **fractal vise**, where each rotating piece is connected to another, allowing movement in multiple axes:
 
 <div style={{textAlign: 'center', margin: '1.5rem 0'}}>
 
-![Morsa Fractal - Conceito](./img/image-1.png)
+![Fractal Vise - Concept](./img/image-1.png)
 
 </div>
 
-:::tip Conceito Chave
-Para que o sistema se adapte a qualquer elemento, utilizamos peças giratórias conectadas sequencialmente. Implementaremos isso usando o comando **Revolve** do Revit.
+:::tip Key Concept
+For the system to adapt to any element, we use rotating pieces connected sequentially. We'll implement this using Revit's **Revolve** command.
 ::: 
 
-## Parte 1: Criando a Família Pivô Fractal
+## Part 1: Creating the Fractal Pivot Family
 
-### 1. Criar Nova Família
+### 1. Create New Family
 
 <div className="steps-container">
 
-- Abra o Revit
-- Crie uma nova família (**Generic Model Adaptive** ou **Metric Generic Model**)
-- Defina os planos de referência base
+- Open Revit
+- Create a new family (**Generic Model Adaptive** or **Metric Generic Model**)
+- Define the base reference planes
 
 </div>
 
 <div style={{textAlign: 'center', margin: '1.5rem 0'}}>
 
-![Criando Nova Família](./img/image-2.png)
+![Creating New Family](./img/image-2.png)
 
 </div>
 
-### 2. Criar o Primeiro Revolve
+### 2. Create the First Revolve
 
 <div className="steps-container">
 
-- Desenhe o perfil para o revolve
-- Use a ferramenta **Revolve** para criar a primeira peça giratória
-- Configure o eixo de rotação
+- Draw the profile for the revolve
+- Use the **Revolve** tool to create the first rotating piece
+- Configure the rotation axis
 
 </div>
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem', margin: '1.5rem 0'}}>
 
-![Perfil do Revolve](./img/image-3.png)
+![Revolve Profile](./img/image-3.png)
 
-![Configuração do Revolve](./img/image-4.png)
+![Revolve Configuration](./img/image-4.png)
 
-![Primeiro Revolve](./img/image-5.png)
+![First Revolve](./img/image-5.png)
 
 </div>
 
 <div style={{textAlign: 'center', margin: '1rem 0'}}>
 
-![Resultado Primeiro Revolve](./img/image-6.png)
+![First Revolve Result](./img/image-6.png)
 
-![Visualização 3D](./img/image-7.png)
+![3D Visualization](./img/image-7.png)
 
 </div>
 
-### 3. Adicionar Parâmetros Angulares
+### 3. Add Angular Parameters
 
-:::warning Importante
-Crie parâmetros claros para controlar a rotação. Isso é fundamental para o controle paramétrico do sistema.
+:::warning Important
+Create clear parameters to control rotation. This is fundamental for parametric control of the system.
 :::
 
 <div className="steps-container">
 
-- Crie parâmetros de ângulo para controlar a rotação
-- Associe os parâmetros ao revolve
-- Configure as fórmulas necessárias
+- Create angle parameters to control rotation
+- Associate parameters with the revolve
+- Configure necessary formulas
 
 </div>
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem', margin: '1.5rem 0'}}>
 
-![Criando Parâmetros](./img/image-8.png)
+![Creating Parameters](./img/image-8.png)
 
-![Configuração de Parâmetros](./img/image-9.png)
+![Parameter Configuration](./img/image-9.png)
 
-![Associando Parâmetros](./img/image-10.png)
+![Associating Parameters](./img/image-10.png)
 
-![Teste de Rotação](./img/image-11.png)
+![Rotation Test](./img/image-11.png)
 
 </div>
 
-### 4. Aplicar Workplane no Revolve
+### 4. Apply Workplane on Revolve
 
-:::danger Passo Crítico
-Este é o passo mais importante! O workplane aplicado na superfície do primeiro revolve será a base para o próximo elemento.
+:::danger Critical Step
+This is the most important step! The workplane applied on the first revolve surface will be the base for the next element.
 :::
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem', margin: '1.5rem 0'}}>
 
-![Aplicando Workplane](./img/image-12.png)
+![Applying Workplane](./img/image-12.png)
 
-![Configuração do Workplane](./img/image-13.png)
+![Workplane Configuration](./img/image-13.png)
 
-![Workplane Posicionado](./img/image-14.png)
+![Positioned Workplane](./img/image-14.png)
 
 </div>
 
-### 5. Criar Segundo Revolve em Direção Diferente
+### 5. Create Second Revolve in Different Direction
 
 <div className="steps-container">
 
-- Com o workplane ativo, crie outro revolve
-- Oriente este revolve em uma direção diferente (perpendicular, por exemplo)
-- Configure seus próprios parâmetros angulares
+- With the workplane active, create another revolve
+- Orient this revolve in a different direction (perpendicular, for example)
+- Configure its own angular parameters
 
 </div>
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem', margin: '1.5rem 0'}}>
 
-![Segundo Revolve](./img/image-15.png)
+![Second Revolve](./img/image-15.png)
 
-![Configuração Perpendicular](./img/image-16.png)
+![Perpendicular Configuration](./img/image-16.png)
 
-![Sistema Completo](./img/image-17.png)
+![Complete System](./img/image-17.png)
 
 </div>
 
-### 6. Configurar Relação Entre os Revolves
+### 6. Configure Relationship Between Revolves
 
 <div className="steps-container">
 
-- Estabeleça a relação paramétrica entre os elementos
-- **Teste**: quando um gira, o outro deve acompanhar mantendo sua orientação relativa
-- Ajuste as constraints conforme necessário
+- Establish parametric relationship between elements
+- **Test**: when one rotates, the other should follow maintaining its relative orientation
+- Adjust constraints as needed
 
 </div>
 
 <div style={{textAlign: 'center', margin: '1.5rem 0'}}>
 
-![Teste de Movimento](./img/image-18.png)
+![Movement Test](./img/image-18.png)
 
 </div>
 
-### 7. Salvar a Família Pivô
+### 7. Save the Pivot Family
 
 <div className="steps-container">
 
-- Salve esta família com um nome descritivo (ex: `Pivo_Fractal_Base`)
-- Esta será sua família de controle rotacional
+- Save this family with a descriptive name (e.g., `Fractal_Pivot_Base`)
+- This will be your rotational control family
 
 </div>
 
 <div style={{textAlign: 'center', margin: '1.5rem 0'}}>
 
-![Salvando a Família](./img/image-19.png)
+![Saving the Family](./img/image-19.png)
 
 </div>
-## Parte 2: Aplicando o Sistema Face-Based
+## Part 2: Applying the Face-Based System
 
-### 8. Criar ou Abrir Família Face-Based
+### 8. Create or Open Face-Based Family
 
 <div className="steps-container">
 
-- Crie uma nova família ou use uma existente (ex: painel fotovoltaico)
-- Escolha o template **Face-Based**
-- Modele o elemento desejado (painel, placa, etc.)
+- Create a new family or use an existing one (e.g., photovoltaic panel)
+- Choose the **Face-Based** template
+- Model the desired element (panel, plate, etc.)
 
 </div>
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem', margin: '1.5rem 0'}}>
 
-![Template Face-Based](./img/image-20.png)
+![Face-Based Template](./img/image-20.png)
 
-![Painel Modelado](./img/image-21.png)
+![Modeled Panel](./img/image-21.png)
 
 </div>
 
-### 9. Inserir no Projeto
+### 9. Insert into Project
 
 <div className="steps-container">
 
-- Carregue ambas as famílias no projeto
-- Primeiro, insira a família pivô fractal
-- Configure os ângulos iniciais
+- Load both families into the project
+- First, insert the fractal pivot family
+- Configure initial angles
 
 </div>
 
-### 10. Aplicar Família Face-Based
+### 10. Apply Face-Based Family
 
-:::tip Aplicação Final
-- Selecione a família face-based
-- **Aplique na face do último revolve** da família pivô
-- A família face-based agora seguirá toda a rotação do sistema
+:::tip Final Application
+- Select the face-based family
+- **Apply on the last revolve face** of the pivot family
+- The face-based family will now follow all system rotation
 :::
 
 ---
 
-## Vantagens do Método
+## Method Advantages
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', margin: '2rem 0'}}>
 
 <div style={{padding: '1.5rem', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px'}}>
-<h4>🎯 Controle Total</h4>
-<p>Controle completo sobre a rotação em múltiplos eixos</p>
+<h4>🎯 Total Control</h4>
+<p>Complete control over rotation in multiple axes</p>
 </div>
 
 <div style={{padding: '1.5rem', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px'}}>
-<h4>🔧 Flexibilidade</h4>
-<p>Adicione quantos níveis de rotação desejar</p>
+<h4>🔧 Flexibility</h4>
+<p>Add as many rotation levels as desired</p>
 </div>
 
 <div style={{padding: '1.5rem', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px'}}>
-<h4>♻️ Reutilização</h4>
-<p>O pivô pode ser usado com diferentes elementos face-based</p>
+<h4>♻️ Reusability</h4>
+<p>The pivot can be used with different face-based elements</p>
 </div>
 
 <div style={{padding: '1.5rem', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px'}}>
-<h4>📐 Precisão</h4>
-<p>Ângulos exatos definidos parametricamente</p>
+<h4>📐 Precision</h4>
+<p>Exact angles defined parametrically</p>
 </div>
 
 </div>
 
-## Dicas Práticas
+## Practical Tips
 
-:::note Boas Práticas
-1. **Nomeação**: Use nomes claros para os parâmetros (ex: `Rotacao_Eixo_X`, `Rotacao_Eixo_Y`)
-2. **Teste Incremental**: Teste cada nível de rotação antes de adicionar o próximo
-3. **Performance**: Limite o número de revolves para manter boa performance
-4. **Visibilidade**: Configure a visibilidade do pivô para ocultá-lo quando necessário
+:::note Best Practices
+1. **Naming**: Use clear names for parameters (e.g., `Rotation_Axis_X`, `Rotation_Axis_Y`)
+2. **Incremental Testing**: Test each rotation level before adding the next
+3. **Performance**: Limit the number of revolves to maintain good performance
+4. **Visibility**: Configure pivot visibility to hide it when necessary
 :::
 
-## Aplicações Práticas
+## Practical Applications
 
 <div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', margin: '1.5rem 0'}}>
 
-- 🌞 Painéis fotovoltaicos com orientação precisa
-- 🏢 Brises ajustáveis  
-- 🎨 Elementos de fachada dinâmicos
-- ⚙️ Equipamentos mecânicos com múltiplos graus de liberdade
-- 💡 Luminárias direcionáveis
+- 🌞 Photovoltaic panels with precise orientation
+- 🏢 Adjustable brise-soleil  
+- 🎨 Dynamic facade elements
+- ⚙️ Mechanical equipment with multiple degrees of freedom
+- 💡 Directional luminaires
 
 </div>
 
-## Resultado Final
+## Final Result
 
-:::success Sistema Completo
-Você terá um sistema onde:
-- ✅ A família pivô controla toda a rotação
-- ✅ O elemento face-based (painel) acompanha perfeitamente o movimento  
-- ✅ Pode-se ajustar ângulos em múltiplas direções
-- ✅ O sistema é totalmente paramétrico e reutilizável
+:::success Complete System
+You will have a system where:
+- ✅ The pivot family controls all rotation
+- ✅ The face-based element (panel) perfectly follows the movement  
+- ✅ Angles can be adjusted in multiple directions
+- ✅ The system is fully parametric and reusable
 :::
