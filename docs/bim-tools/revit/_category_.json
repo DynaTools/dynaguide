@@ -1,0 +1,10 @@
+{
+  "label": "Revit",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "title": "Revit Tools & Techniques",
+    "description": "Advanced Revit tutorials covering parametric families, modeling techniques, and workflow optimization.",
+    "slug": "/category/bim-tools/revit"
+  }
+}

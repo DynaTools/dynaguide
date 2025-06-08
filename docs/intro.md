@@ -23,7 +23,7 @@ Practical guides and development platforms
 ### [Text Analysis with AI](/category/ai-text-analysis)
 Intelligent processing and interpretation of documents
 
-### [Lab - BIM Tools](/category/lab)
+### [BIM Tools](/category/bim-tools)
 Practical exercises with Revit and Dynamo
 
 ### [Papers](/category/papers)

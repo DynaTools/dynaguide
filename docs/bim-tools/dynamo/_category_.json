@@ -1,0 +1,10 @@
+{
+  "label": "Dynamo",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "title": "Dynamo Scripting & Automation",
+    "description": "Dynamo tutorials for visual programming, automation scripts, and parametric design workflows.",
+    "slug": "/category/bim-tools/dynamo"
+  }
+}
