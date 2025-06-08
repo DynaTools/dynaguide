@@ -6,9 +6,9 @@ sidebar_position: 3
 
 Let's take a look at how this is happening in the real world, because understanding these applications will help you visualize the potential that exists in our own field.
 
-## Transforming Medicine
+## Medicine
 
-Starting with healthcare—and here there's an interesting connection to what we do. Have you ever noticed how a good architectural project requires a detailed analysis of plans, sections, and details? Doctors face something similar when analyzing medical images. The difference is that instead of identifying structural problems in a building, they are looking for anomalies in the human body.
+Doctors face something similar when analyzing medical images. The difference is that instead of identifying structural problems in a building, they are looking for anomalies in the human body.
 
 LLMs are being integrated with medical imaging technologies to help radiologists interpret scans with greater accuracy [15]. It's fascinating: these systems can analyze clinical reports written in natural language and correlate them with visual data, creating insights that increase diagnostic accuracy [16].
 
@@ -18,7 +18,7 @@ One application that particularly impresses me is the automation of medical docu
 
 Med-PaLM, developed by Google, represents the state of the art in this area. Using advanced prompting strategies—which are basically smart ways of "talking" to the AI—this model has achieved impressive results on medical benchmarks, reaching 67.6% accuracy on MedQA, an exam equivalent to the US Medical Licensing Examination [19].
 
-## Revolutionizing Finance
+## Finance
 
 In the financial world, things get even more interesting. Think of finance as a sector that deals with an absurd amount of documents, data, and analysis—not unlike how we handle technical specifications, standards, and regulations in construction.
 
@@ -28,7 +28,7 @@ For risk management, these systems interpret complex regulatory documents and id
 
 BloombergGPT is a fascinating example of this specialization. Trained specifically with 363 billion tokens of financial data, this model can natively understand the jargon of the financial market [22]. When tested against other models on financial tasks, it consistently outperformed the competition, showing how much specialization matters.
 
-## Transforming Education
+## Education
 
 In education, LLMs are creating personalized learning experiences in a way we've never seen before. It's like having a private tutor available 24/7 who adapts to your pace and learning style.
 
@@ -36,13 +36,13 @@ These systems can evaluate essays and academic papers, providing detailed feedba
 
 For us, who frequently need to stay updated with new technologies and standards, imagine having an assistant that can explain complex concepts simply, answer specific questions, and even simulate project scenarios for practice [24].
 
-## Supporting the Legal System
+## Legal System
 
 In law, a traditionally conservative field, LLMs are proving their worth in tasks that require meticulous document analysis—something that has much in common with the analysis of contracts and specifications we perform in projects.
 
 Systems like GPT-3 are being tested on statutory reasoning, a fundamental skill in legal practice. Although they still have limitations, they can already interpret laws and apply them to specific situations with increasing accuracy [25]. GPT-4 even achieved a score in the top 10% on simulations of the bar exam [26].
 
-## Accelerating Scientific Research
+## Scientific Research
 
 Perhaps one of the most exciting applications is in scientific research. LLMs can assist in all stages of the research process: from literature review to hypothesis generation, data analysis, and even writing articles [27].
 

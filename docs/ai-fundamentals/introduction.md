@@ -72,10 +72,10 @@ This is what Artificial Intelligence promises: not to replace our expertise, but
 
 ## References Cited in This Section
 
-[1] Kosinski, M. (2023). Theory of Mind May Have Spontaneously Emerged in Large Language Models. CoRR abs/2302.02083.
+[1] Kosinski, M. (2023). Evaluating Large Language Models in Theory of Mind Tasks. *arXiv preprint arXiv:2302.02083*. https://arxiv.org/abs/2302.02083
 
-[2] Dziri, N., Lu, X., Sclar, M., Li, X. L., Jiang, L., Lin, B. Y., West, P., Ammanabrolu, C., Alai, F., Fazel-Zarandi, M., Huang, L., Karamcheti, S., Outi, S., Rawte, V., Singh, A., Tafjord, O., Swayamdipta, S., Hajishirzi, H., Choi, Y., Sabharwal, A., & Smith, N. A. (2023). Faith and fate: Limits of transformers on compositionality. In Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS).
+[2] Dziri, N., Lu, X., Sclar, M., Li, X. L., Jiang, L., Lin, B. Y., West, P., Ammanabrolu, C., Alai, F., Fazel-Zarandi, M., Huang, L., Karamcheti, S., Outi, S., Rawte, V., Singh, A., Tafjord, O., Swayamdipta, S., Hajishirzi, H., Choi, Y., Sabharwal, A., & Smith, N. A. (2023). Faith and fate: Limits of transformers on compositionality. In *Thirty-seventh Conference on Neural Information Processing Systems (NeurIPS)*. https://papers.nips.cc/paper_files/paper/2023/hash/deb3c28192f979302c157cb653c15e90-Abstract-Conference.html
 
-[3] Sridhara, G., H. G., R., & Mazumdar, S. (2023). ChatGPT: A Study on Its Utility for Ubiquitous Software Engineering Tasks. CoRR abs/2305.16837.
+[3] Sridhara, G., H. G., R., & Mazumdar, S. (2023). ChatGPT: A Study on Its Utility for Ubiquitous Software Engineering Tasks. *arXiv preprint arXiv:2305.16837*. https://arxiv.org/abs/2305.16837
 
-[4] Zhao, W. X., Zhou, K., Li, J., Tang, T., Wang, X., Hou, Y., Min, Y., Zhang, B., Zhang, J., Dong, Z., Du, Y., Yang, C., Chen, Y., Chen, Z., Jiang, J., Ren, R., Li, Y., Tang, X., Liu, Z., Liu, P., Nie, J. Y., & Wen, J. R. (2023). A Survey of Large Language Models.
+[4] Zhao, W. X., Zhou, K., Li, J., Tang, T., Wang, X., Hou, Y., Min, Y., Zhang, B., Zhang, J., Dong, Z., Du, Y., Yang, C., Chen, Y., Chen, Z., Jiang, J., Ren, R., Li, Y., Tang, X., Liu, Z., Liu, P., Nie, J. Y., & Wen, J. R. (2023). A Survey of Large Language Models. *arXiv preprint arXiv:2303.18223*. https://arxiv.org/abs/2303.18223
