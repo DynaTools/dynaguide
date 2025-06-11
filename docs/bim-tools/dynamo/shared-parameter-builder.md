@@ -11,61 +11,61 @@ sidebar_position: 3
 
 ---
 
-## 🔧 Como Funciona o Script Dynamo
+## 🔧 How the Dynamo Script Works
 
-:::info Para Iniciantes
-Este script automatiza a criação de Shared Parameters no Revit lendo dados do Excel. Não se preocupe se você é novo no Dynamo - vamos explicar cada passo!
+:::info For Beginners
+This script automates the creation of Shared Parameters in Revit by reading data from Excel. Don't worry if you're new to Dynamo - we'll explain every step!
 :::
 
-### Fluxo do Script (da esquerda para direita)
+### Script Workflow (left to right)
 
 ![Dynamo Node Flow](./img/shared-parameter-builder/dynamo-script-overview.png)
 
-#### 1️⃣ **Entrada de Dados (File Path)**
-- **O que faz**: Localiza o arquivo Excel com seus parâmetros
-- **Para você**: Cole o caminho completo do seu arquivo Excel aqui
-- **Exemplo**: `C:\Users\SeuNome\Desktop\MeusParametros.xlsx`
+#### 1️⃣ **Data Input (File Path)**
+- **What it does**: Locates your Excel file with parameter data
+- **For you**: Paste the complete path to your Excel file here
+- **Example**: `C:\Users\YourName\Desktop\MyParameters.xlsx`
 
-#### 2️⃣ **Leitura do Excel (Data.ImportExcel)**
-- **O que faz**: Lê todas as linhas e colunas do Excel
-- **Importante**: Os dados saem como **texto simples** (strings)
-- **Por que isso importa**: O Revit precisa de códigos específicos, não texto comum
+#### 2️⃣ **Excel Reading (Data.ImportExcel)**
+- **What it does**: Reads all rows and columns from Excel
+- **Important**: Data comes out as **plain text** (strings)
+- **Why this matters**: Revit needs specific codes, not common text
 
-#### 3️⃣ **Conversão de Dados (List.Deconstruct + List.Transpose)**
-- **O que faz**: Separa cada coluna do Excel em listas individuais
-- **Para você**: Não precisa mexer aqui - funciona automaticamente
-- **Resultado**: 6 listas separadas (uma para cada coluna)
+#### 3️⃣ **Data Conversion (List.Deconstruct + List.Transpose)**
+- **What it does**: Separates each Excel column into individual lists
+- **For you**: No need to touch this - works automatically
+- **Result**: 6 separate lists (one for each column)
 
-#### 4️⃣ **Conversão Forge (Nodes TypeId)**
-- **O que faz**: Converte texto do Excel em códigos que o Revit entende
-- **SpecType.ByTypeId**: Converte tipos de dados (texto, número, etc.)
-- **GroupType.ByTypeId**: Converte grupos de propriedades
-- **Category.ByName**: Converte nomes de categorias
+#### 4️⃣ **Forge Conversion (TypeId Nodes)**
+- **What it does**: Converts Excel text into codes Revit understands
+- **SpecType.ByTypeId**: Converts data types (text, number, etc.)
+- **GroupType.ByTypeId**: Converts property groups
+- **Category.ByName**: Converts category names
 
-:::warning Por que Precisamos do Forge?
-O Excel armazena tudo como texto, mas o Revit precisa de identificadores específicos. Por exemplo:
-- Excel: `"autodesk.spec:spec.string-2.0.0"` (texto)
-- Revit: `SpecTypeId` (objeto específico)
+:::warning Why Do We Need Forge?
+Excel stores everything as text, but Revit needs specific identifiers. For example:
+- Excel: `"autodesk.spec:spec.string-2.0.0"` (text)
+- Revit: `SpecTypeId` (specific object)
 
-O Forge faz essa "tradução" automática!
+Forge does this "translation" automatically!
 :::
 
-#### 5️⃣ **Criação dos Parâmetros (Parameter.CreateSharedParameter)**
-- **O que faz**: Finalmente cria os Shared Parameters no Revit
-- **Recebe**: Todos os dados convertidos dos passos anteriores
-- **Resultado**: Parâmetros aparecem no seu projeto Revit
+#### 5️⃣ **Parameter Creation (Parameter.CreateSharedParameter)**
+- **What it does**: Finally creates the Shared Parameters in Revit
+- **Receives**: All converted data from previous steps
+- **Result**: Parameters appear in your Revit project
 
-### Principais Nodes Explicados
+### Key Nodes Explained
 
-| Node | Função | Por que é Importante |
-|------|--------|---------------------|
-| `Data.ImportExcel` | Lê arquivo Excel | Entrada de dados do usuário |
-| `List.Deconstruct` | Separa colunas | Organiza dados para processamento |
-| `List.Transpose` | Reorganiza listas | Prepara dados na ordem correta |
-| `SpecType.ByTypeId` | Converte tipo de dado | Revit entende o formato do parâmetro |
-| `GroupType.ByTypeId` | Converte grupo | Revit sabe onde mostrar o parâmetro |
-| `Category.ByName` | Converte categoria | Revit sabe em quais objetos aplicar |
-| `Parameter.CreateSharedParameter` | Cria parâmetro | Resultado final no Revit |
+| Node | Function | Why It's Important |
+|------|----------|-------------------|
+| `Data.ImportExcel` | Reads Excel file | User data input |
+| `List.Deconstruct` | Separates columns | Organizes data for processing |
+| `List.Transpose` | Reorganizes lists | Prepares data in correct order |
+| `SpecType.ByTypeId` | Converts data type | Revit understands parameter format |
+| `GroupType.ByTypeId` | Converts group | Revit knows where to show parameter |
+| `Category.ByName` | Converts category | Revit knows which objects to apply to |
+| `Parameter.CreateSharedParameter` | Creates parameter | Final result in Revit |
 
 ---
 
@@ -112,10 +112,28 @@ SRE_ELEVATOR_LOAD	Specialty Equipment	Specialty Equipment_SRE	FALSE	autodesk.par
 
 ---
 
-## ⑤ Forge ID Cheat‑Sheet
+## ⑤ Complete Forge ID Reference Guide
+
+### 📋 Quick Reference Table (SpecType + GroupType)
+
+| SpecType | GroupType | Description |
+|----------|-----------|-------------|
+| `autodesk.spec.aec.electrical:apparentPower-2.0.0` | `autodesk.parameter.group:electrical-1.0.0` | Electrical apparent power |
+| `autodesk.spec.aec.electrical:current-2.0.0` | `autodesk.parameter.group:electrical-1.0.0` | Electrical current |
+| `autodesk.spec.aec.electrical:power-2.0.0` | `autodesk.parameter.group:electrical-1.0.0` | Electrical power |
+| `autodesk.spec.aec.hvac:airFlow-2.0.0` | `autodesk.parameter.group:mechanical-1.0.0` | HVAC air flow |
+| `autodesk.spec.aec.hvac:temperature-2.0.0` | `autodesk.parameter.group:mechanical-1.0.0` | Temperature |
+| `autodesk.spec.aec.piping:flow-2.0.0` | `autodesk.parameter.group:mechanical-1.0.0` | Piping flow |
+| `autodesk.spec.aec.structural:force-2.0.0` | `autodesk.parameter.group:identityData-1.0.0` | Structural force |
+| `autodesk.spec.aec:area-2.0.0` | `autodesk.parameter.group:dimensions-1.0.0` | Area measurement |
+| `autodesk.spec.aec:length-2.0.0` | `autodesk.parameter.group:dimensions-1.0.0` | Length measurement |
+| `autodesk.spec.aec:volume-2.0.0` | `autodesk.parameter.group:dimensions-1.0.0` | Volume measurement |
+| `autodesk.spec.aec:number-2.0.0` | `autodesk.parameter.group:identityData-1.0.0` | Numeric value |
+| `autodesk.spec:spec.string-2.0.0` | `autodesk.parameter.group:identityData-1.0.0` | Text string |
+| `autodesk.spec:spec.bool-1.0.0` | `autodesk.parameter.group:identityData-1.0.0` | True/False |
 
 <details>
-<summary><strong>GroupTypeIds</strong></summary>
+<summary><strong>All Available GroupTypes</strong></summary>
 
 ```text
 autodesk.parameter.group:identityData-1.0.0
@@ -131,49 +149,283 @@ autodesk.parameter.group:materials-1.0.0
 </details>
 
 <details>
-<summary><strong>SpecTypeIds – Electrical & General (excerpt)</strong></summary>
+<summary><strong>Complete SpecType List - All Categories</strong></summary>
 
 ```text
 autodesk.spec.aec.electrical:apparentPower-2.0.0
 autodesk.spec.aec.electrical:apparentPowerDensity-1.0.0
 autodesk.spec.aec.electrical:cableTraySize-2.0.0
 autodesk.spec.aec.electrical:colorTemperature-2.0.0
+autodesk.spec.aec.electrical:conduitSize-2.0.0
+autodesk.spec.aec.electrical:costRateEnergy-2.0.0
+autodesk.spec.aec.electrical:costRatePower-2.0.0
 autodesk.spec.aec.electrical:current-2.0.0
 autodesk.spec.aec.electrical:demandFactor-2.0.0
+autodesk.spec.aec.electrical:efficacy-2.0.0
 autodesk.spec.aec.electrical:frequency-2.0.0
 autodesk.spec.aec.electrical:illuminance-2.0.0
+autodesk.spec.aec.electrical:luminance-2.0.0
 autodesk.spec.aec.electrical:luminousFlux-2.0.0
+autodesk.spec.aec.electrical:luminousIntensity-2.0.0
+autodesk.spec.aec.electrical:potential-2.0.0
 autodesk.spec.aec.electrical:power-2.0.0
 autodesk.spec.aec.electrical:powerDensity-2.0.0
-autodesk.spec.aec:number-2.0.0
-autodesk.spec:spec.string-2.0.0
-autodesk.spec:spec.bool-1.0.0
-```
-
-*(scroll for the full list)*
-
-</details>
-
-<details>
-<summary><strong>Full SpecTypeId List (HVAC, Piping, Structural, …)</strong></summary>
-
-```text
+autodesk.spec.aec.electrical:powerPerLength-2.0.0
+autodesk.spec.aec.electrical:resistivity-2.0.0
+autodesk.spec.aec.electrical:temperature-2.0.0
+autodesk.spec.aec.electrical:temperatureDifference-2.0.0
+autodesk.spec.aec.electrical:wattage-2.0.0
+autodesk.spec.aec.electrical:wireDiameter-2.0.0
+autodesk.spec.aec.electrical:loadClassification-1.0.0
 autodesk.spec.aec.energy:energy-2.0.0
 autodesk.spec.aec.energy:heatCapacityPerArea-2.0.0
 autodesk.spec.aec.energy:heatTransferCoefficient-2.0.0
 autodesk.spec.aec.energy:isothermalMoistureCapacity-2.0.0
+autodesk.spec.aec.energy:permeability-2.0.0
+autodesk.spec.aec.energy:specificHeat-2.0.0
+autodesk.spec.aec.energy:specificHeatOfVaporization-2.0.0
 autodesk.spec.aec.energy:thermalConductivity-2.0.0
+autodesk.spec.aec.energy:thermalGradientCoefficientForMoistureCapacity-2.0.0
+autodesk.spec.aec.energy:thermalMass-2.0.0
+autodesk.spec.aec.energy:thermalResistance-2.0.0
 autodesk.spec.aec.hvac:airFlow-2.0.0
+autodesk.spec.aec.hvac:airFlowDensity-2.0.0
+autodesk.spec.aec.hvac:airFlowDividedByCoolingLoad-2.0.0
+autodesk.spec.aec.hvac:airFlowDividedByVolume-2.0.0
+autodesk.spec.aec.hvac:angularSpeed-2.0.0
+autodesk.spec.aec.hvac:areaDividedByCoolingLoad-2.0.0
+autodesk.spec.aec.hvac:areaDividedByHeatingLoad-2.0.0
 autodesk.spec.aec.hvac:coolingLoad-2.0.0
+autodesk.spec.aec.hvac:coolingLoadDividedByArea-2.0.0
+autodesk.spec.aec.hvac:coolingLoadDividedByVolume-2.0.0
+autodesk.spec.aec.hvac:crossSection-2.0.0
+autodesk.spec.aec.hvac:density-2.0.0
+autodesk.spec.aec.hvac:diffusivity-2.0.0
+autodesk.spec.aec.hvac:ductInsulationThickness-2.0.0
+autodesk.spec.aec.hvac:ductLiningThickness-2.0.0
+autodesk.spec.aec.hvac:ductSize-2.0.0
+autodesk.spec.aec.hvac:factor-2.0.0
+autodesk.spec.aec.hvac:flowPerPower-2.0.0
+autodesk.spec.aec.hvac:friction-2.0.0
+autodesk.spec.aec.hvac:heatGain-2.0.0
+autodesk.spec.aec.hvac:heatingLoad-2.0.0
+autodesk.spec.aec.hvac:heatingLoadDividedByArea-2.0.0
+autodesk.spec.aec.hvac:heatingLoadDividedByVolume-2.0.0
+autodesk.spec.aec.hvac:massPerTime-2.0.0
+autodesk.spec.aec.hvac:power-2.0.0
+autodesk.spec.aec.hvac:powerDensity-2.0.0
+autodesk.spec.aec.hvac:powerPerFlow-2.0.0
+autodesk.spec.aec.hvac:pressure-2.0.0
+autodesk.spec.aec.hvac:roughness-2.0.0
+autodesk.spec.aec.hvac:slope-2.0.0
+autodesk.spec.aec.hvac:temperature-2.0.0
+autodesk.spec.aec.hvac:temperatureDifference-2.0.0
+autodesk.spec.aec.hvac:velocity-2.0.0
+autodesk.spec.aec.hvac:viscosity-2.0.0
+autodesk.spec.aec.infrastructure:stationing-2.0.0
+autodesk.spec.aec.infrastructure:stationingInterval-2.0.0
+autodesk.spec.aec.piping:density-2.0.0
+autodesk.spec.aec.piping:flow-2.0.0
+autodesk.spec.aec.piping:friction-2.0.0
+autodesk.spec.aec.piping:mass-2.0.0
+autodesk.spec.aec.piping:massPerTime-2.0.0
+autodesk.spec.aec.piping:pipeDimension-2.0.0
+autodesk.spec.aec.piping:pipeInsulationThickness-2.0.0
+autodesk.spec.aec.piping:pipeMassPerUnitLength-2.0.0
 autodesk.spec.aec.piping:pipeSize-2.0.0
+autodesk.spec.aec.piping:pressure-2.0.0
+autodesk.spec.aec.piping:roughness-2.0.0
+autodesk.spec.aec.piping:slope-2.0.0
+autodesk.spec.aec.piping:temperature-2.0.0
+autodesk.spec.aec.piping:temperatureDifference-2.0.0
+autodesk.spec.aec.piping:velocity-2.0.0
+autodesk.spec.aec.piping:viscosity-2.0.0
+autodesk.spec.aec.piping:volume-2.0.0
+autodesk.spec.aec.structural:acceleration-2.0.0
+autodesk.spec.aec.structural:areaForce-2.0.0
+autodesk.spec.aec.structural:areaForceScale-2.0.0
+autodesk.spec.aec.structural:areaSpringCoefficient-2.0.0
+autodesk.spec.aec.structural:barDiameter-2.0.0
+autodesk.spec.aec.structural:crackWidth-2.0.0
+autodesk.spec.aec.structural:displacement-2.0.0
+autodesk.spec.aec.structural:energy-2.0.0
 autodesk.spec.aec.structural:force-2.0.0
+autodesk.spec.aec.structural:forceScale-2.0.0
+autodesk.spec.aec.structural:frequency-2.0.0
+autodesk.spec.aec.structural:lineSpringCoefficient-2.0.0
+autodesk.spec.aec.structural:linearForce-2.0.0
+autodesk.spec.aec.structural:linearForceScale-2.0.0
+autodesk.spec.aec.structural:linearMoment-2.0.0
+autodesk.spec.aec.structural:linearMomentScale-2.0.0
+autodesk.spec.aec.structural:mass-2.0.0
+autodesk.spec.aec.structural:massPerUnitArea-2.0.0
+autodesk.spec.aec.structural:massPerUnitLength-2.0.0
+autodesk.spec.aec.structural:moment-2.0.0
+autodesk.spec.aec.structural:momentOfInertia-2.0.0
+autodesk.spec.aec.structural:momentScale-2.0.0
+autodesk.spec.aec.structural:period-2.0.0
+autodesk.spec.aec.structural:pointSpringCoefficient-2.0.0
+autodesk.spec.aec.structural:pulsation-2.0.0
+autodesk.spec.aec.structural:reinforcementArea-2.0.0
+autodesk.spec.aec.structural:reinforcementAreaPerUnitLength-2.0.0
+autodesk.spec.aec.structural:reinforcementCover-2.0.0
+autodesk.spec.aec.structural:reinforcementLength-2.0.0
+autodesk.spec.aec.structural:reinforcementSpacing-2.0.0
+autodesk.spec.aec.structural:reinforcementVolume-2.0.0
+autodesk.spec.aec.structural:rotation-2.0.0
+autodesk.spec.aec.structural:rotationalLineSpringCoefficient-2.0.0
+autodesk.spec.aec.structural:rotationalPointSpringCoefficient-2.0.0
+autodesk.spec.aec.structural:sectionArea-2.0.0
+autodesk.spec.aec.structural:sectionDimension-2.0.0
+autodesk.spec.aec.structural:sectionModulus-2.0.0
+autodesk.spec.aec.structural:sectionProperty-2.0.0
+autodesk.spec.aec.structural:stress-2.0.0
+autodesk.spec.aec.structural:surfaceAreaPerUnitLength-2.0.0
+autodesk.spec.aec.structural:thermalExpansionCoefficient-2.0.0
+autodesk.spec.aec.structural:unitWeight-2.0.0
+autodesk.spec.aec.structural:velocity-2.0.0
+autodesk.spec.aec.structural:warpingConstant-2.0.0
+autodesk.spec.aec.structural:weight-2.0.0
+autodesk.spec.aec.structural:weightPerUnitLength-2.0.0
+autodesk.spec.aec:angle-2.0.0
+autodesk.spec.aec:area-2.0.0
+autodesk.spec.aec:costPerArea-2.0.0
+autodesk.spec.aec:decimalSheetLength-2.0.0
+autodesk.spec.aec:distance-2.0.0
+autodesk.spec.aec:length-2.0.0
+autodesk.spec.aec:massDensity-2.0.0
+autodesk.spec.aec:number-2.0.0
+autodesk.spec.aec:rotationAngle-2.0.0
+autodesk.spec.aec:sheetLength-2.0.0
+autodesk.spec.aec:siteAngle-2.0.0
+autodesk.spec.aec:slope-2.0.0
+autodesk.spec.aec:speed-2.0.0
+autodesk.spec.aec:time-2.0.0
 autodesk.spec.aec:volume-2.0.0
+autodesk.spec.aec:material-1.0.0
+autodesk.spec.aec:numberOfPoles-2.0.0
+autodesk.spec.aec:multilineText-2.0.0
+autodesk.spec.aec:fillPattern-1.0.0
+autodesk.spec.measurable:currency-2.0.0
+autodesk.spec:spec.int64-2.0.0
+autodesk.spec:spec.string-2.0.0
+autodesk.spec:spec.bool-1.0.0
+autodesk.spec.string:url-2.0.0
 autodesk.spec.reference:image-1.0.0
 ```
 
 </details>
 
 ---
+
+---
+
+## 📊 Expanded Templates & Examples
+
+### Template Collection - Ready to Use
+
+<details>
+<summary><strong>🏗️ Structural Parameters Template</strong></summary>
+
+```text
+parameter_Name	category	groupName	instance/Type	grouptype	spectype
+STRUCT_BEAM_CAPACITY	Structural Framing	Structural Analysis	FALSE	autodesk.parameter.group:identityData-1.0.0	autodesk.spec.aec.structural:force-2.0.0
+STRUCT_COLUMN_LOAD	Structural Columns	Structural Analysis	TRUE	autodesk.parameter.group:identityData-1.0.0	autodesk.spec.aec.structural:force-2.0.0
+STRUCT_FOUNDATION_TYPE	Structural Foundations	Structural Analysis	FALSE	autodesk.parameter.group:identityData-1.0.0	autodesk.spec:spec.string-2.0.0
+STRUCT_REINFORCEMENT_GRADE	Structural Framing	Materials	FALSE	autodesk.parameter.group:materials-1.0.0	autodesk.spec:spec.string-2.0.0
+STRUCT_MOMENT_CAPACITY	Structural Framing	Structural Analysis	FALSE	autodesk.parameter.group:identityData-1.0.0	autodesk.spec.aec.structural:moment-2.0.0
+```
+
+</details>
+
+<details>
+<summary><strong>⚡ Electrical Parameters Template</strong></summary>
+
+```text
+parameter_Name	category	groupName	instance/Type	grouptype	spectype
+ELEC_PANEL_RATING	Electrical Equipment	Electrical Analysis	FALSE	autodesk.parameter.group:electrical-1.0.0	autodesk.spec.aec.electrical:current-2.0.0
+ELEC_CIRCUIT_BREAKER	Electrical Equipment	Electrical Analysis	TRUE	autodesk.parameter.group:electrical-1.0.0	autodesk.spec:spec.string-2.0.0
+ELEC_POWER_CONSUMPTION	Electrical Equipment	Electrical Analysis	TRUE	autodesk.parameter.group:electrical-1.0.0	autodesk.spec.aec.electrical:power-2.0.0
+ELEC_VOLTAGE_RATING	Electrical Equipment	Electrical Analysis	FALSE	autodesk.parameter.group:electrical-1.0.0	autodesk.spec.aec.electrical:potential-2.0.0
+ELEC_CONDUIT_SIZE	Conduit Fittings	Electrical Analysis	FALSE	autodesk.parameter.group:electrical-1.0.0	autodesk.spec.aec.electrical:conduitSize-2.0.0
+```
+
+</details>
+
+<details>
+<summary><strong>🌡️ HVAC Parameters Template</strong></summary>
+
+```text
+parameter_Name	category	groupName	instance/Type	grouptype	spectype
+HVAC_AIR_FLOW_RATE	Mechanical Equipment	HVAC Analysis	TRUE	autodesk.parameter.group:mechanical-1.0.0	autodesk.spec.aec.hvac:airFlow-2.0.0
+HVAC_COOLING_CAPACITY	Mechanical Equipment	HVAC Analysis	FALSE	autodesk.parameter.group:mechanical-1.0.0	autodesk.spec.aec.hvac:coolingLoad-2.0.0
+HVAC_HEATING_CAPACITY	Mechanical Equipment	HVAC Analysis	FALSE	autodesk.parameter.group:mechanical-1.0.0	autodesk.spec.aec.hvac:heatingLoad-2.0.0
+HVAC_DUCT_SIZE	Ducts	HVAC Analysis	FALSE	autodesk.parameter.group:mechanical-1.0.0	autodesk.spec.aec.hvac:ductSize-2.0.0
+HVAC_TEMPERATURE_SETPOINT	Spaces	HVAC Analysis	TRUE	autodesk.parameter.group:mechanical-1.0.0	autodesk.spec.aec.hvac:temperature-2.0.0
+```
+
+</details>
+
+<details>
+<summary><strong>🚿 Plumbing Parameters Template</strong></summary>
+
+```text
+parameter_Name	category	groupName	instance/Type	grouptype	spectype
+PLUMB_PIPE_SIZE	Pipes	Plumbing Analysis	FALSE	autodesk.parameter.group:mechanical-1.0.0	autodesk.spec.aec.piping:pipeSize-2.0.0
+PLUMB_FLOW_RATE	Plumbing Fixtures	Plumbing Analysis	TRUE	autodesk.parameter.group:mechanical-1.0.0	autodesk.spec.aec.piping:flow-2.0.0
+PLUMB_PRESSURE_RATING	Pipes	Plumbing Analysis	FALSE	autodesk.parameter.group:mechanical-1.0.0	autodesk.spec.aec.piping:pressure-2.0.0
+PLUMB_FIXTURE_TYPE	Plumbing Fixtures	Plumbing Analysis	FALSE	autodesk.parameter.group:identityData-1.0.0	autodesk.spec:spec.string-2.0.0
+PLUMB_WATER_TEMPERATURE	Plumbing Fixtures	Plumbing Analysis	TRUE	autodesk.parameter.group:mechanical-1.0.0	autodesk.spec.aec.piping:temperature-2.0.0
+```
+
+</details>
+
+<details>
+<summary><strong>📐 General Dimensions Template</strong></summary>
+
+```text
+parameter_Name	category	groupName	instance/Type	grouptype	spectype
+DIM_CUSTOM_LENGTH	Walls;Floors;Roofs	Custom Dimensions	TRUE	autodesk.parameter.group:dimensions-1.0.0	autodesk.spec.aec:length-2.0.0
+DIM_CUSTOM_AREA	Walls;Floors;Roofs	Custom Dimensions	TRUE	autodesk.parameter.group:dimensions-1.0.0	autodesk.spec.aec:area-2.0.0
+DIM_CUSTOM_VOLUME	Rooms;Spaces	Custom Dimensions	TRUE	autodesk.parameter.group:dimensions-1.0.0	autodesk.spec.aec:volume-2.0.0
+DIM_CUSTOM_ANGLE	Generic Models	Custom Dimensions	TRUE	autodesk.parameter.group:dimensions-1.0.0	autodesk.spec.aec:angle-2.0.0
+DIM_CUSTOM_COUNT	Generic Models	Custom Dimensions	TRUE	autodesk.parameter.group:identityData-1.0.0	autodesk.spec.aec:number-2.0.0
+```
+
+</details>
+
+<details>
+<summary><strong>🏢 Specialty Equipment Template (Complete Example)</strong></summary>
+
+```text
+parameter_Name	category	groupName	instance/Type	grouptype	spectype
+SRE_ELEVATOR_TYPE	Specialty Equipment	Specialty Equipment_SRE	FALSE	autodesk.parameter.group:identityData-1.0.0	autodesk.spec:spec.string-2.0.0
+SRE_ELEVATOR_DRIVE_TYPE	Specialty Equipment	Specialty Equipment_SRE	FALSE	autodesk.parameter.group:identityData-1.0.0	autodesk.spec:spec.string-2.0.0
+SRE_ELEVATOR_STOPS	Specialty Equipment	Specialty Equipment_SRE	TRUE	autodesk.parameter.group:identityData-1.0.0	autodesk.spec.aec:number-2.0.0
+SRE_ELEVATOR_DOORS	Specialty Equipment	Specialty Equipment_SRE	TRUE	autodesk.parameter.group:identityData-1.0.0	autodesk.spec.aec:number-2.0.0
+SRE_ELEVATOR_LOAD	Specialty Equipment	Specialty Equipment_SRE	FALSE	autodesk.parameter.group:identityData-1.0.0	autodesk.spec.aec:number-2.0.0
+SRE_ELEVATOR_SPEED	Specialty Equipment	Specialty Equipment_SRE	FALSE	autodesk.parameter.group:identityData-1.0.0	autodesk.spec.aec:speed-2.0.0
+SRE_ELEVATOR_MANUFACTURER	Specialty Equipment	Specialty Equipment_SRE	FALSE	autodesk.parameter.group:identityData-1.0.0	autodesk.spec:spec.string-2.0.0
+SRE_ELEVATOR_MODEL	Specialty Equipment	Specialty Equipment_SRE	FALSE	autodesk.parameter.group:identityData-1.0.0	autodesk.spec:spec.string-2.0.0
+SRE_ELEVATOR_POWER_REQUIRED	Specialty Equipment	Specialty Equipment_SRE	FALSE	autodesk.parameter.group:electrical-1.0.0	autodesk.spec.aec.electrical:power-2.0.0
+SRE_ELEVATOR_IS_ACCESSIBLE	Specialty Equipment	Specialty Equipment_SRE	FALSE	autodesk.parameter.group:identityData-1.0.0	autodesk.spec:spec.bool-1.0.0
+```
+
+</details>
+
+### 🎯 Common Parameter Combinations
+
+| Parameter Type | Recommended SpecType | Recommended GroupType |
+|----------------|---------------------|---------------------|
+| **Text Description** | `autodesk.spec:spec.string-2.0.0` | `autodesk.parameter.group:identityData-1.0.0` |
+| **Numeric Count** | `autodesk.spec.aec:number-2.0.0` | `autodesk.parameter.group:identityData-1.0.0` |
+| **Yes/No Choice** | `autodesk.spec:spec.bool-1.0.0` | `autodesk.parameter.group:identityData-1.0.0` |
+| **Length/Distance** | `autodesk.spec.aec:length-2.0.0` | `autodesk.parameter.group:dimensions-1.0.0` |
+| **Area** | `autodesk.spec.aec:area-2.0.0` | `autodesk.parameter.group:dimensions-1.0.0` |
+| **Volume** | `autodesk.spec.aec:volume-2.0.0` | `autodesk.parameter.group:dimensions-1.0.0` |
+| **Electrical Power** | `autodesk.spec.aec.electrical:power-2.0.0` | `autodesk.parameter.group:electrical-1.0.0` |
+| **Temperature** | `autodesk.spec.aec.hvac:temperature-2.0.0` | `autodesk.parameter.group:mechanical-1.0.0` |
+| **Structural Force** | `autodesk.spec.aec.structural:force-2.0.0` | `autodesk.parameter.group:identityData-1.0.0` |
 
 ---
 
@@ -185,25 +437,25 @@ autodesk.spec.reference:image-1.0.0
 
 ---
 
-## 🚀 Dicas para Iniciantes
+## 🚀 Tips for Beginners
 
-### ✅ Checklist Antes de Rodar
-- [ ] Arquivo Excel salvo e fechado
-- [ ] Caminho do arquivo correto no node "File Path"
-- [ ] Dados preenchidos seguindo exatamente o template
-- [ ] Revit aberto com um projeto ativo
+### ✅ Pre-Run Checklist
+- [ ] Excel file saved and closed
+- [ ] Correct file path in "File Path" node
+- [ ] Data filled following template exactly
+- [ ] Revit open with an active project
 
-### ⚠️ Erros Comuns
-1. **"Cannot find file"**: Verifique se o caminho está correto
-2. **"Invalid SpecType"**: Use exatamente os códigos da lista Forge
-3. **"Parameter already exists"**: O parâmetro já foi criado antes
-4. **"Invalid Category"**: Nome da categoria deve estar em inglês
+### ⚠️ Common Errors
+1. **"Cannot find file"**: Check if the path is correct
+2. **"Invalid SpecType"**: Use exactly the codes from Forge list
+3. **"Parameter already exists"**: Parameter was already created before
+4. **"Invalid Category"**: Category name must be in English
 
-### 💡 Dicas Avançadas
-- **Múltiplas categorias**: Separe com `;` (ex: "Walls;Doors;Windows")
-- **Backup**: Sempre faça backup do projeto antes de rodar
-- **Teste pequeno**: Comece com 1-2 parâmetros para testar
-- **Nomes únicos**: Use prefixos para evitar conflitos (ex: "SRE_", "MEP_")
+### 💡 Advanced Tips
+- **Multiple categories**: Separate with `;` (e.g., "Walls;Doors;Windows")
+- **Backup**: Always backup project before running
+- **Test small**: Start with 1-2 parameters to test
+- **Unique names**: Use prefixes to avoid conflicts (e.g., "SRE_", "MEP_")
 
 ---
 
