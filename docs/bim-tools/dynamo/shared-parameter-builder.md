@@ -7,8 +7,6 @@ sidebar_position: 3
 > Quickly create Revit Shared Parameters from Excel using the Dynamo graph.
 > Everything you need – instructions, blank template, sample data and Forge IDs – in one place.
 
-![Dynamo Script Overview](./img/shared-parameter-builder/dynamo-script-overview.png)
-
 ---
 
 ## 🔧 How the Dynamo Script Works
