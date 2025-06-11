@@ -26,6 +26,8 @@ This script automates the creation of Shared Parameters in Revit by reading data
 - **For you**: Paste the complete path to your Excel file here
 - **Example**: `C:\Users\YourName\Desktop\MyParameters.xlsx`
 
+![alt text](image-3.png)
+
 #### 2️⃣ **Excel Reading (Data.ImportExcel)**
 - **What it does**: Reads all rows and columns from Excel
 - **Important**: Data comes out as **plain text** (strings)
@@ -36,11 +38,15 @@ This script automates the creation of Shared Parameters in Revit by reading data
 - **For you**: No need to touch this - works automatically
 - **Result**: 6 separate lists (one for each column)
 
+![alt text](image-4.png)
+
 #### 4️⃣ **Forge Conversion (TypeId Nodes)**
 - **What it does**: Converts Excel text into codes Revit understands
 - **SpecType.ByTypeId**: Converts data types (text, number, etc.)
 - **GroupType.ByTypeId**: Converts property groups
 - **Category.ByName**: Converts category names
+
+![alt text](image-5.png)
 
 :::warning Why Do We Need Forge?
 Excel stores everything as text, but Revit needs specific identifiers. For example:
@@ -54,6 +60,8 @@ Forge does this "translation" automatically!
 - **What it does**: Finally creates the Shared Parameters in Revit
 - **Receives**: All converted data from previous steps
 - **Result**: Parameters appear in your Revit project
+
+![alt text](image-6.png)
 
 ### Key Nodes Explained
 
