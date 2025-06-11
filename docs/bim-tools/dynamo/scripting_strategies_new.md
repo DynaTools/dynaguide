@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 title: Modern Scripting Strategies in Dynamo
 description: Complete guide to text-based scripting in Dynamo, including DesignScript, Python, ZeroTouch (C#), and AI-assisted development
 keywords: [dynamo, scripting, python, designscript, zerotuch, bim, autodesk, ai-assisted, chatgpt, copilot]
