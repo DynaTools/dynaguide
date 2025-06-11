@@ -4,11 +4,11 @@ sidebar_position: 2
 
 # Dynamic Scripts in Dynamo for Revit
 
-![Dynamo Script](./img/Dynamo_time/script.png)
+
 
 <div style={{textAlign: 'center', marginBottom: '2rem'}}>
 
-![Dynamo Animation](./img/Dynamo_time/Dynanomic.gif)
+![alt text](<Dynanomic (1).gif>)
 
 </div>
 
@@ -106,6 +106,6 @@ OUT = valores_ajustados
 3.  **Value Adjustment**: The values are limited to a maximum of 90 degrees.
 4.  **Application**: The final value is applied to the parameter of the selected element in Revit.
 :::
-
+![alt text](<script (1).png>)
 This example demonstrates how Dynamo can be used to create time-based automations, opening up possibilities for more realistic and dynamic simulations in Revit.
 ```

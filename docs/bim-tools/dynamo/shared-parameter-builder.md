@@ -17,8 +17,6 @@ This script automates the creation of Shared Parameters in Revit by reading data
 
 ### Script Workflow (left to right)
 
-![Dynamo Node Flow](./img/shared-parameter-builder/dynamo-script-overview.png)
-
 #### 1️⃣ **Data Input (File Path)**
 - **What it does**: Locates your Excel file with parameter data
 - **For you**: Paste the complete path to your Excel file here
