@@ -2,108 +2,138 @@
 sidebar_position: 3
 ---
 
-# Shared Parameter Builder – One‑Page Guide
+# Automatic Shared Parameter Builder
 
-> Quickly create Revit Shared Parameters from Excel using the Dynamo graph.
-> Everything you need – instructions, blank template, sample data and Forge IDs – in one place.
+This practical guide teaches you how to create shared parameters using Dynamo and Revit. While this is a well-established topic with many available plugins and scripts, the main challenge lies in properly configuring the **Spec Types** and **Group Types**, since these are not simple text strings but require specific data types that Revit can understand.
 
----
+## Understanding Parameter Types
 
-## 🔧 How the Dynamo Script Works
+### Spec Type (Type of Parameter)
+The Spec Type defines what kind of data the parameter will store - whether it's text, numbers, measurements, electrical values, etc.
 
-:::info For Beginners
-This script automates the creation of Shared Parameters in Revit by reading data from Excel. Don't worry if you're new to Dynamo - we'll explain every step!
-:::
+![alt text](image-7.png)
 
-### Script Workflow (left to right)
+### Group Type 
+The Group Type determines which section the parameter will appear in within Revit's Properties panel - such as Dimensions, Identity Data, Electrical, Mechanical, etc.
+
+![alt text](image-8.png)
+
+## The Dynamo Approach
+
+Creating a shared parameter with Dynamo is straightforward - you just need to find the right node. Here's an overview of the parameters we need to consider: 
+
+![alt text](image-9.png)
+
+### Script Workflow (Left to Right)
+
+This workflow breaks down the process into 5 clear steps, each handling a specific part of the parameter creation process:
 
 #### 1️⃣ **Data Input (File Path)**
-- **What it does**: Locates your Excel file with parameter data
-- **For you**: Paste the complete path to your Excel file here
+- **What it does**: Locates your Excel file containing parameter definitions
+- **For you**: Simply paste the complete file path to your Excel file
 - **Example**: `C:\Users\YourName\Desktop\MyParameters.xlsx`
+- **Important**: Make sure the Excel file is closed before running the script
 
 ![alt text](image-3.png)
 
 #### 2️⃣ **Excel Reading (Data.ImportExcel)**
-- **What it does**: Reads all rows and columns from Excel
-- **Important**: Data comes out as **plain text** (strings)
-- **Why this matters**: Revit needs specific codes, not common text
+- **What it does**: Reads all rows and columns from your Excel spreadsheet
+- **Important**: All data comes out as **plain text** (strings)
+- **Why this matters**: Revit needs specific object types, not just text strings
+- **Result**: Raw data that needs to be converted to Revit-compatible formats
 
 #### 3️⃣ **Data Conversion (List.Deconstruct + List.Transpose)**
-- **What it does**: Separates each Excel column into individual lists
-- **For you**: No need to touch this - works automatically
-- **Result**: 6 separate lists (one for each column)
+- **What it does**: Separates each Excel column into individual lists for processing
+- **For you**: No configuration needed - this works automatically
+- **Result**: 6 separate lists (one for each column: name, category, group, instance/type, grouptype, spectype)
+- **Why needed**: Dynamo processes lists more efficiently than tables
 
 ![alt text](image-4.png)
 
 #### 4️⃣ **Forge Conversion (TypeId Nodes)**
-- **What it does**: Converts Excel text into codes Revit understands
-- **SpecType.ByTypeId**: Converts data types (text, number, etc.)
-- **GroupType.ByTypeId**: Converts property groups
-- **Category.ByName**: Converts category names
+- **What it does**: Converts Excel text strings into proper Revit object types
+- **SpecType.ByTypeId**: Converts spec type strings (like "autodesk.spec:spec.string-2.0.0") into SpecTypeId objects
+- **GroupType.ByTypeId**: Converts group type strings into GroupTypeId objects  
+- **Category.ByName**: Converts category names (like "Walls") into Category objects
 
 ![alt text](image-5.png)
 
-:::warning Why Do We Need Forge?
-Excel stores everything as text, but Revit needs specific identifiers. For example:
-- Excel: `"autodesk.spec:spec.string-2.0.0"` (text)
-- Revit: `SpecTypeId` (specific object)
+:::warning Why Do We Need Forge Conversion?
+Excel stores everything as text, but Revit's API requires specific object types. For example:
+- **Excel stores**: `"autodesk.spec:spec.string-2.0.0"` (just text)
+- **Revit needs**: A proper `SpecTypeId` object
 
-Forge does this "translation" automatically!
+The Forge nodes do this "translation" automatically, converting text strings into the proper Revit API objects!
 :::
 
 #### 5️⃣ **Parameter Creation (Parameter.CreateSharedParameter)**
-- **What it does**: Finally creates the Shared Parameters in Revit
-- **Receives**: All converted data from previous steps
-- **Result**: Parameters appear in your Revit project
+- **What it does**: Finally creates the actual Shared Parameters in your Revit project
+- **Receives**: All the converted data from the previous steps (proper Revit objects, not text)
+- **Result**: Parameters appear in your Revit project and Properties panel
+- **Success indicator**: Parameters will be visible in the Revit interface immediately
 
 ![alt text](image-6.png)
 
 ### Key Nodes Explained
 
-| Node | Function | Why It's Important |
+Understanding each node's role will help you troubleshoot and customize the workflow:
+
+| Node | Function | Why It's Critical |
 |------|----------|-------------------|
-| `Data.ImportExcel` | Reads Excel file | User data input |
-| `List.Deconstruct` | Separates columns | Organizes data for processing |
-| `List.Transpose` | Reorganizes lists | Prepares data in correct order |
-| `SpecType.ByTypeId` | Converts data type | Revit understands parameter format |
-| `GroupType.ByTypeId` | Converts group | Revit knows where to show parameter |
-| `Category.ByName` | Converts category | Revit knows which objects to apply to |
-| `Parameter.CreateSharedParameter` | Creates parameter | Final result in Revit |
+| `Data.ImportExcel` | Reads Excel file data | **Entry point** - all your parameter definitions start here |
+| `List.Deconstruct` | Separates columns into individual lists | **Data organization** - prepares data for parallel processing |
+| `List.Transpose` | Reorganizes list structure | **Data alignment** - ensures proper data flow to conversion nodes |
+| `SpecType.ByTypeId` | Converts spec type text to Revit objects | **Critical conversion** - wrong spec = parameter won't work |
+| `GroupType.ByTypeId` | Converts group text to Revit objects | **UI placement** - determines where parameter appears in Properties |
+| `Category.ByName` | Converts category names to Revit objects | **Element targeting** - defines which Revit elements get the parameter |
+| `Parameter.CreateSharedParameter` | Creates the actual parameters | **Final execution** - the moment parameters are born in Revit |
 
 ---
 
-## ① Quick Start
+## ① Quick Start Guide
 
-1. **Copy** the **Blank Template** (section ③) into a new Excel sheet.
-2. **Fill** the rows with your parameters. Use the **Forge ID Cheat‑Sheet** (section ⑤) to copy valid *groupType* and *specType* values.
-3. **Save** the file and point the **File Path** node in Dynamo to it.
-4. Press **Run** – your Shared Parameters will appear in Revit.
+Follow these steps to create your first shared parameters:
+
+1. **Prepare your data**: Copy the **Blank Template** (section ③) into a new Excel file
+2. **Fill parameter details**: Add your parameter information row by row. Use the **Forge ID Reference Guide** (section ⑤) to find valid *groupType* and *specType* values
+3. **Save and locate**: Save your Excel file and copy its complete file path
+4. **Configure Dynamo**: Paste the file path into the **File Path** node in the Dynamo script
+5. **Execute**: Press **Run** in Dynamo - your Shared Parameters will immediately appear in Revit
+
+**Pro tip**: Start with just 1-2 parameters to test the workflow before creating larger batches.
 
 ---
 
 ## ② Column Definitions
 
-| Column              | Purpose                                                     |
-| ------------------- | ----------------------------------------------------------- |
-| **parameter\_Name** | Exact name of the new Shared Parameter.                     |
-| **category**        | Target Revit category (single or several separated by `;`). |
-| **groupName**       | Folder name shown in the Properties palette.                |
-| **instance/Type**   | `TRUE` → Instance   `FALSE` → Type                          |
-| **grouptype**       | Copy one string from *GroupTypeId* list.                    |
-| **spectype**        | Copy one string from *SpecTypeId* list.                     |
+Your Excel file must have exactly these 6 columns in this exact order:
+
+| Column | Purpose | Examples | Notes |
+| ------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------- |
+| **parameter_Name** | The exact name that will appear in Revit's Properties panel | `ELEC_PANEL_RATING`, `STRUCT_BEAM_CAPACITY` | **No spaces in middle recommended** - use underscores |
+| **category** | Which Revit elements will get this parameter | `Walls`, `Doors`, `Electrical Equipment` | **Multiple categories**: separate with `;` like `Walls;Doors;Windows` |
+| **groupName** | Custom folder name in the Properties palette | `Electrical Analysis`, `Custom Dimensions` | **Creates new sections** in Properties panel |
+| **instance/Type** | Parameter applies to individual elements or element types | `TRUE` → Instance parameter<br/>`FALSE` → Type parameter | **Instance**: varies per element<br/>**Type**: shared across all elements of same type |
+| **grouptype** | Predefined Revit property section | `autodesk.parameter.group:electrical-1.0.0` | **Must be exact match** from Forge list - controls where parameter appears |
+| **spectype** | Data type and units the parameter will store | `autodesk.spec:spec.string-2.0.0` (text)<br/>`autodesk.spec.aec:length-2.0.0` (length) | **Must be exact match** from Forge list - determines what data types are allowed |
 
 ---
 
-## ③ Blank Template   *copy ↓ into Excel*
+## ③ Blank Template - Copy to Excel
+
+Copy this header row into your Excel file exactly as shown (tab-separated):
 
 ```text
 parameter_Name	category	groupName	instance/Type	grouptype	spectype
 ```
 
+**Important**: Make sure to use **Tab** characters between columns, not spaces.
+
 ---
 
-## ④ Worked Example   *paste ready‑to‑run*
+## ④ Complete Working Example
+
+Here's a ready-to-use example for elevator equipment parameters. Copy this into Excel to test the workflow:
 
 ```text
 parameter_Name	category	groupName	instance/Type	grouptype	spectype
@@ -114,9 +144,17 @@ SRE_ELEVATOR_DOORS	Specialty Equipment	Specialty Equipment_SRE	TRUE	autodesk.par
 SRE_ELEVATOR_LOAD	Specialty Equipment	Specialty Equipment_SRE	FALSE	autodesk.parameter.group:identityData-1.0.0	autodesk.spec.aec:number-2.0.0
 ```
 
+**What this creates**:
+- 5 parameters for Specialty Equipment category
+- Custom group called "Specialty Equipment_SRE" in Properties panel
+- Mix of text (TYPE, DRIVE_TYPE) and numeric (STOPS, DOORS, LOAD) parameters
+- Some instance-level (STOPS, DOORS) and some type-level (TYPE, DRIVE_TYPE, LOAD) parameters
+
 ---
 
 ## ⑤ Complete Forge ID Reference Guide
+
+This section provides all the valid **SpecType** and **GroupType** identifiers you need. Always copy these exactly as shown - they're case-sensitive and must match perfectly.
 
 ### 📋 Quick Reference Table (SpecType + GroupType)
 
@@ -433,11 +471,16 @@ SRE_ELEVATOR_IS_ACCESSIBLE	Specialty Equipment	Specialty Equipment_SRE	FALSE	aut
 
 ---
 
-### Need help?
+### 🆘 Need Help?
 
-* Check in‑line comments inside the Dynamo graph for node‑by‑node explanations.
-* Forge documentation: **Revit API → ForgeTypeId**.
-* Contact **Paulo Giavoni – BIM Specialist** for assistance.
+**Troubleshooting Resources:**
+* **Check in-line comments**: Inside the Dynamo graph for node-by-node explanations
+* **Forge documentation**: Look up **Revit API → ForgeTypeId** for official references
+* **Test incrementally**: Start with 1-2 parameters before creating large batches
+* **Verify Excel format**: Ensure tab-separated values and exact column headers
+
+**Contact:**
+* **Paulo Giavoni – BIM Specialist** for technical assistance
 
 ---
 
@@ -456,11 +499,18 @@ SRE_ELEVATOR_IS_ACCESSIBLE	Specialty Equipment	Specialty Equipment_SRE	FALSE	aut
 4. **"Invalid Category"**: Category name must be in English
 
 ### 💡 Advanced Tips
-- **Multiple categories**: Separate with `;` (e.g., "Walls;Doors;Windows")
-- **Backup**: Always backup project before running
-- **Test small**: Start with 1-2 parameters to test
-- **Unique names**: Use prefixes to avoid conflicts (e.g., "SRE_", "MEP_")
+
+**Data Management:**
+- **Multiple categories**: Separate with semicolons: `"Walls;Doors;Windows"`
+- **Unique naming**: Use prefixes to avoid conflicts: `"SRE_"`, `"MEP_"`, `"STRUCT_"`
+- **Test incrementally**: Start with 1-2 parameters before creating large batches
+
+**Best Practices:**
+- **Always backup**: Save your Revit project before running the script
+- **Close Excel**: Make sure your Excel file is closed when running Dynamo
+- **Validate data**: Double-check SpecType and GroupType values against the reference lists
+- **Document changes**: Keep a record of parameters created for future reference
 
 ---
 
-*Version 1.0 • Last updated: June 11, 2025*
+*Version 1.1 • Last updated: June 12, 2025*
